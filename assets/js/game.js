@@ -19,7 +19,16 @@ Array.prototype.allCardsShuffle = function() {
     }
 };
 
-
+let clickedButton = function(){
+    activeButton = this;
+    if ($(this).hasClass('easybtn')){
+        deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
+    } else if ($(this).hasClass('mediumbtn')){
+        deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png']
+    } else {
+        deck = allCards;
+    }
+}
 
 let checkButton = function (){
     buttons.forEach(function(button){
