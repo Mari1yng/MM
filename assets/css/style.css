@@ -18,6 +18,18 @@
     font-style: normal;
 }
 
+body {
+    font-family: 'Audiowide', cursive;
+    color: #f9c80e;
+    background-image: url(../images/background.png);
+    min-height: 100vh;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
     font-family: 'neonregular';
@@ -27,7 +39,9 @@ h1 {
 
 p {
     font-family: 'beastform';
-    font-size: 48px;
+    font-size: 52px;
+    letter-spacing: 6px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -58,6 +72,18 @@ div#board {
     width: 600px;
     padding: 10px;
     margin: 0px auto;;
+}
+
+div#board > div {
+    background: url(../images/tilecover.png) no-repeat;
+    border: 1px solid #f6019d;
+    border-radius: 2px;
+    height: 125px;
+    width: 125px;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+
 }
 
 /* Media */ 
