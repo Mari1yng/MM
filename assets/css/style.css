@@ -17,3 +17,54 @@
     font-weight: normal;
     font-style: normal;
 }
+
+h1 {
+    text-align: center;
+    font-family: 'neonregular';
+    font-size: 64px;
+    color: #f6019d;
+}
+
+p {
+    font-family: 'beastform';
+    font-size: 48px;
+    text-align: center;
+}
+
+.buttondiv {
+    display: inline;
+}
+
+.btn {
+    letter-spacing: 1px;
+    color: #2de2e6;
+}
+
+.easybtn {
+    background-color: #f6019d;
+}
+
+.mediumbtn {
+    background-color: #791e94;
+}
+
+.hardbtn {
+    background-color: #ff6c11;
+}
+
+div#board {
+    background-color: rgba(0, 0, 0, 0);
+    border: #f9c80e;
+    width: 600px;
+    padding: 10px;
+    margin: 0px auto;;
+}
+
+/* Media */ 
+@media (min-width: 690px) {
+    .buttondiv {
+        display: block;
+        padding: 25px;
+        text-align: center;
+    }  
+}
