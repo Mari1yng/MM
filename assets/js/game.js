@@ -23,10 +23,10 @@ Array.prototype.allCardsShuffle = function() {
 function createGrid (){
     let newGrid = '';
 //making sure the grid is created from the available deck - after checkButton () ran
-    for (i = 0; i < deck.lenght; i++){
-    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
+    for (i = 0; i < deck.length; i++){
+    newGrid += '<div id="tile_' + i + '" onclick="flipTile(this,\'' + deck[i] + '\')"></div>';
+    }; 
     document.getElementById('board').innerHTML = newGrid;
-    };    
 }
 
 let clickedButton = function(){
