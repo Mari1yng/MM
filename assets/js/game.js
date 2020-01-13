@@ -1,6 +1,7 @@
 let allCards = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png', 'ghost.png', 'ghost.png', 'bombjack.png', 'bombjack.png'];
 let buttons = [...document.getElementsByTagName('button')];
 
+
 let visibleTiles = 0;
 let activeButton;
 let deck;
@@ -24,7 +25,7 @@ function createGrid (){
     let newGrid = '';
 //making sure the grid is created from the available deck - after checkButton () ran
     for (i = 0; i < deck.length; i++){
-    newGrid += '<div id="tile_' + i + '" onclick="startGame(this,\'' + deck[i] + '\')"></div>';
+    newGrid += '<div id="tile' + i + ' class="tile" onclick="startGame(this,\'' + deck[i] + '\')"></div>';
     }; 
     document.getElementById('board').innerHTML = newGrid;
 }
@@ -34,14 +35,17 @@ let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
         deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
+        
         deck.allCardsShuffle();
         createGrid ();
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png'];
+        
         deck.allCardsShuffle();
         createGrid ();
     } else {
         deck = allCards;
+        
         deck.allCardsShuffle();
         createGrid ();
     }
