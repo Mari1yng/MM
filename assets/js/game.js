@@ -16,18 +16,30 @@ Array.prototype.allCardsShuffle = function() {
         tempVar = this[newPosition];
         this[newPosition] = this[i];
         this[i] = tempVar
-    }
+    } return this;
 };
 
 let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
         deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
+        deck.allCardsShuffle();
     } else if ($(this).hasClass('mediumbtn')){
-        deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png']
+        deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png'];
+        deck.allCardsShuffle();
     } else {
         deck = allCards;
+        deck.allCardsShuffle();
     }
+}
+
+//Function that will create new grid
+function createGrid (){
+    let newGrid = '';
+//making sure the grid is created from the available deck - after checkButton () ran
+    for (i = 0; i < deck.lenght; i++){
+    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
+    };    
 }
 
 let checkButton = function (){
@@ -35,14 +47,5 @@ let checkButton = function (){
         button.addEventListener('click', clickedButton);
     });
 }
-//Function that will create new grid
-function createGrid (){
-    checkButton();
-    let newGrid = '';
-    deck.allCardsShuffle();
 
-//making sure the grid is created from the available deck - after checkButton () ran
-    for (i = 0; i < deck.lenght; i++){
-    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
-    };    
-}
+checkButton();  
