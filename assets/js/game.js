@@ -36,4 +36,6 @@ let checkButton = function (){
     });
 }
 
-checkButton();
+function createGrid (){
+    checkButton();
+}
