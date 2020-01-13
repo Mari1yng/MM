@@ -19,6 +19,16 @@ Array.prototype.allCardsShuffle = function() {
     } return this;
 };
 
+//Function that will create new grid
+function createGrid (){
+    let newGrid = '';
+//making sure the grid is created from the available deck - after checkButton () ran
+    for (i = 0; i < deck.lenght; i++){
+    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
+    document.getElementById('board').innerHTML = newGrid;
+    };    
+}
+
 let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
@@ -33,15 +43,7 @@ let clickedButton = function(){
     }
 }
 
-//Function that will create new grid
-function createGrid (){
-    let newGrid = '';
-//making sure the grid is created from the available deck - after checkButton () ran
-    for (i = 0; i < deck.lenght; i++){
-    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
-    document.getElementById('board').innerHTML = newGrid;
-    };    
-}
+
 
 let checkButton = function (){
     buttons.forEach(function(button){
