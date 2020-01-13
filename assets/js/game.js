@@ -1,6 +1,6 @@
 let allCards = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png', 'ghost.png', 'ghost.png', 'bombjack.png', 'bombjack.png'];
 let buttons = [...document.getElementsByTagName('button')];
-let tiles =[...document.getElementsByClassName('tile')];
+let tiles;
 
 let visibleTiles = 0;
 let activeButton;
@@ -37,14 +37,17 @@ let clickedButton = function(){
         deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
         deck.allCardsShuffle();
         createGrid ();
+        tiles=[...document.getElementsByClassName('tile')];
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png'];
         deck.allCardsShuffle();
         createGrid ();
+        tiles=[...document.getElementsByClassName('tile')];
     } else {
         deck = allCards;
         deck.allCardsShuffle();
         createGrid ();
+        tiles=[...document.getElementsByClassName('tile')];
     }
 }
 
