@@ -1,4 +1,4 @@
-let allCards = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png', 'ghost.png', 'ghost.png', 'bombjack.png', 'bombjack.png'];
+let allCards = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
 let buttons = [...document.getElementsByTagName('button')];
 let tiles;
 
@@ -25,21 +25,26 @@ function createGrid (){
     let newGrid = '';
 //making sure the grid is created from the available deck - after checkButton () ran
     for (i = 0; i < deck.length; i++){
-    newGrid += '<div id="tile' + i + '" onclick="startGame(this,\'' + deck[i] + '\')"class="tile"></div>';
+    newGrid += '<div id="tile' + i + '" onclick="startGame()"class="tile '+ deck[i] + '"></div>';
     }; 
     document.getElementById('board').innerHTML = newGrid;
+}
+
+//Function that will start flipping the tiles
+function startGame(){
+
 }
 
 //Function that acts when easy, medium and hard difficulty buttons are clicked
 let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
-        deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
+        deck = deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
     } else if ($(this).hasClass('mediumbtn')){
-        deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png'];
+        deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
@@ -59,7 +64,3 @@ let checkButton = function (){
 }
 
 checkButton();  
-
-function startGame(){
-
-}
