@@ -31,6 +31,10 @@ function createGrid (){
 }
 
 //Function that will start flipping the tiles
+function flipTile(){
+    
+}
+
 function startGame(){
     tiles.forEach(function(tile){
         tile.addEventListener('click', flipTile);
