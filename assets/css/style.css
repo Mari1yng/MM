@@ -74,7 +74,6 @@ div#board {
 }
 
 div#board > div {
-    background-image: url(../images/tilecover.png);
     border: 1px solid #f6019d;
     border-radius: 8px;
     height: 125px;
@@ -83,6 +82,7 @@ div#board > div {
     margin: 6px;
     cursor: pointer;
 }
+
 .bombjack {
     background-image: url(../images/bombjack.png);
 }
@@ -107,7 +107,9 @@ div#board > div {
 .robin {
     background-image: url(../images/robin.png);
 }
-
+.hidden {
+    background-image: url(../images/tilecover.png);
+}
 /* Media */ 
 @media (min-width: 690px) {
     .buttondiv {

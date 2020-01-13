@@ -26,7 +26,7 @@ function createGrid (){
     let newGrid = '';
 //making sure the grid is created from the available deck - after checkButton () ran
     for (i = 0; i < deck.length; i++){
-    newGrid += '<div id="tile' + i + '" onclick="startGame()"class="tile '+ deck[i] + '"></div>';
+    newGrid += '<div id="tile' + i + '"class="tile '+ deck[i] + ' hidden"></div>';
     }; 
     document.getElementById('board').innerHTML = newGrid;
 }
@@ -34,7 +34,7 @@ function createGrid (){
 //Function that will start flipping the tiles
 function flipTile(){
     visibleTile = this;
-    
+    this.classList.remove('hidden'); 
 }
 
 function startGame(){
@@ -51,6 +51,7 @@ let clickedButton = function(){
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
+        startGame();
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
         deck.allCardsShuffle();
