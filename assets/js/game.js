@@ -5,7 +5,7 @@ let visibleTiles = 0;
 let activeButton;
 let deck;
 
-// Shuffle all cards using Fisher-Yates shuffle algorithm
+// Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
 Array.prototype.allCardsShuffle = function() {
     let newPosition;
     let tempVar;
@@ -28,7 +28,7 @@ function createGrid (){
     }; 
     document.getElementById('board').innerHTML = newGrid;
 }
-
+//Function that acts when easy, medium and hard difficulty buttons are clicked
 let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
@@ -46,8 +46,7 @@ let clickedButton = function(){
     }
 }
 
-
-
+//function that listens for which button is clicked
 let checkButton = function (){
     buttons.forEach(function(button){
         button.addEventListener('click', clickedButton);

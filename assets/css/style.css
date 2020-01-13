@@ -68,22 +68,20 @@ p {
 
 div#board {
     background-color: rgba(0, 0, 0, 0);
-    border: #f9c80e;
-    width: 600px;
-    padding: 10px;
+    max-width: 610px;
+    padding: 5px;
     margin: 0px auto;;
 }
 
 div#board > div {
     background: url(../images/tilecover.png) no-repeat;
     border: 1px solid #f6019d;
-    border-radius: 2px;
+    border-radius: 8px;
     height: 125px;
     width: 125px;
     float: left;
-    margin: 10px;
+    margin: 6px;
     cursor: pointer;
-
 }
 
 /* Media */ 
