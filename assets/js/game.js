@@ -34,12 +34,15 @@ let clickedButton = function(){
     if ($(this).hasClass('easybtn')){
         deck = deck = ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png'];
         deck.allCardsShuffle();
+        createGrid ();
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario.png', 'mario.png','luigi.png', 'luigi.png', 'leonardo.png', 'leonardo.png', 'robin.png', 'robin.png', 'frogger.png', 'frogger.png', 'donkeykong.png', 'donkeykong.png'];
         deck.allCardsShuffle();
+        createGrid ();
     } else {
         deck = allCards;
         deck.allCardsShuffle();
+        createGrid ();
     }
 }
 
