@@ -35,8 +35,9 @@ let checkButton = function (){
         button.addEventListener('click', clickedButton);
     });
 }
-
+//Function that will create new grid
 function createGrid (){
     checkButton();
     let newGrid = '';
+    deck.allCardsShuffle();
 }
