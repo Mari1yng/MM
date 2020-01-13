@@ -38,4 +38,5 @@ let checkButton = function (){
 
 function createGrid (){
     checkButton();
+    let newGrid = '';
 }
