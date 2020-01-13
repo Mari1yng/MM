@@ -3,6 +3,7 @@ let buttons = [...document.getElementsByTagName('button')];
 let tiles;
 
 let visibleTiles = 0;
+let visibleTile;
 let activeButton;
 let deck;
 
@@ -32,6 +33,7 @@ function createGrid (){
 
 //Function that will start flipping the tiles
 function flipTile(){
+    visibleTile = this;
     
 }
 
