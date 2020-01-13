@@ -40,4 +40,9 @@ function createGrid (){
     checkButton();
     let newGrid = '';
     deck.allCardsShuffle();
+
+//making sure the grid is created from the available deck - after checkButton () ran
+    for (i = 0; i < deck.lenght; i++){
+    newGrid += '<div id="tile'+i+'" onclick="flipTile(this,\''+deck[i]+'\')"></div>';
+    };    
 }
