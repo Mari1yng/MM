@@ -110,6 +110,9 @@ div#board > div {
 .hidden {
     background-image: url(../images/tilecover.png);
 }
+.removed {
+    opacity: 0;
+}
 /* Media */ 
 @media (min-width: 690px) {
     .buttondiv {

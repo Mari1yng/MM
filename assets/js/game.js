@@ -51,8 +51,14 @@ function flipTile(){
             visibleTiles.forEach(function(tile){
                 tile.classList.add('hidden');
             });
+            tiles.forEach(function(tile){
+                tile.addEventListener('click', flipTile);    
+            }); 
 
-        } else {cardsMatched++;}
+        } else {
+            cardsMatched++;
+
+        }   
     }
 }
 
