@@ -45,7 +45,10 @@ function flipTile(){
         $('h2').html('Turns: ' + turnCounter);
         tiles.forEach(function(tile){
             tile.removeEventListener('click', flipTile);
-        })
+        });
+        if (visibleTiles[0].className !== visibleTiles[1].className){
+
+        } else {}
     }
 }
 
