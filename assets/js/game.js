@@ -47,22 +47,21 @@ function flipTile() {
         tiles.forEach(function (tile) {
             tile.removeEventListener('click', flipTile);
         });
-
         if (visibleTiles[0].className === visibleTiles[1].className) {
             cardsMatched++;
-            visibleTiles.forEach(function(tile){
+            visibleTiles.forEach(function (tile) {
                 tile.classList.add('removed');
             });
 
-
         } else {
-            visibleTiles.forEach(function(tile){
+            visibleTiles.forEach(function (tile) {
                 tile.classList.add('hidden');
             });
         };
-        tiles.forEach(function(tile){
+        tiles.forEach(function (tile) {
             tile.addEventListener('click', flipTile);
-        });   
+        });
+        visibleTiles = [];
     }
 }
 
