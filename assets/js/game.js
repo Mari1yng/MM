@@ -88,12 +88,14 @@ let clickedButton = function(){
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
+        startGame();
 
     } else {
         deck = allCards;
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
+        startGame();
   
     }
 }
