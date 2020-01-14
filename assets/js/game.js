@@ -34,31 +34,31 @@ function createGrid (){
 }
 
 //Function that will start flipping the tiles
-function flipTile(){
+function flipTile() {
     visibleTile = this;
-    this.classList.remove('hidden'); 
-    if (visibleTiles.length == 0){
+    this.classList.remove('hidden');
+    if (visibleTiles.length == 0) {
         visibleTiles[0] = visibleTile;
         return;
-    } else{
+    } else {
         visibleTiles[1] = visibleTile;
         turnCounter++;
         $('h2').html('Turns: ' + turnCounter);
-        tiles.forEach(function(tile){
+        tiles.forEach(function (tile) {
             tile.removeEventListener('click', flipTile);
         });
-        if (visibleTiles[0].className !== visibleTiles[1].className){
+
+        if (visibleTiles[0].className === visibleTiles[1].className) {
+            cardsMatched++;
+
+        } else {
             visibleTiles.forEach(function(tile){
                 tile.classList.add('hidden');
             });
-            tiles.forEach(function(tile){
-                tile.addEventListener('click', flipTile);    
-            }); 
-
-        } else {
-            cardsMatched++;
-
-        }   
+        };
+        tiles.forEach(function(tile){
+            tile.addEventListener('click', flipTile);    
+        }); 
     }
 }
 
