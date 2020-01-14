@@ -6,6 +6,7 @@ let visibleTiles = [];
 let visibleTile;
 let activeButton;
 let deck;
+let turnCounter = 0;
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
 Array.prototype.allCardsShuffle = function() {
@@ -40,6 +41,8 @@ function flipTile(){
         return;
     } else{
         visibleTiles[1] = visibleTile;
+        turnCounter++;
+        $('h2').html('Turns: ' + turnCounter);
     }
 }
 
