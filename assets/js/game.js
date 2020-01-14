@@ -37,6 +37,7 @@ function flipTile(){
     this.classList.remove('hidden'); 
     if (visibleTiles[0] = ""){
         visibleTiles[0] = visibleTile;
+        return;
     } else{
         visibleTiles[1] = visibleTile;
     }
