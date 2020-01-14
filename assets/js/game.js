@@ -2,7 +2,7 @@ let allCards = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robi
 let buttons = [...document.getElementsByTagName('button')];
 let tiles;
 
-let visibleTiles = 0;
+let visibleTiles = [];
 let visibleTile;
 let activeButton;
 let deck;
@@ -35,6 +35,11 @@ function createGrid (){
 function flipTile(){
     visibleTile = this;
     this.classList.remove('hidden'); 
+    if (visibleTiles[0] = ""){
+        visibleTiles[0] = visibleTile;
+    } else{
+        visibleTiles[1] = visibleTile;
+    }
 }
 
 function startGame(){
@@ -57,11 +62,13 @@ let clickedButton = function(){
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
+
     } else {
         deck = allCards;
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
+  
     }
 }
 
