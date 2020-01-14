@@ -36,7 +36,7 @@ function createGrid (){
 function flipTile(){
     visibleTile = this;
     this.classList.remove('hidden'); 
-    if (visibleTiles[0] = ""){
+    if (visibleTiles.length == 0){
         visibleTiles[0] = visibleTile;
         return;
     } else{
