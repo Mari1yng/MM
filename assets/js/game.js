@@ -7,6 +7,7 @@ let visibleTile;
 let activeButton;
 let deck;
 let turnCounter = 0;
+let cardsMatched = 0;
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
 Array.prototype.allCardsShuffle = function() {
@@ -51,7 +52,7 @@ function flipTile(){
                 tile.classList.add('hidden');
             });
 
-        } else {}
+        } else {cardsMatched++;}
     }
 }
 
