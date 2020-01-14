@@ -47,6 +47,9 @@ function flipTile(){
             tile.removeEventListener('click', flipTile);
         });
         if (visibleTiles[0].className !== visibleTiles[1].className){
+            visibleTiles.forEach(function(tile){
+                tile.classList.add('hidden');
+            });
 
         } else {}
     }
