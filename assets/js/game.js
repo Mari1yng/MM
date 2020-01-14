@@ -43,6 +43,9 @@ function flipTile(){
         visibleTiles[1] = visibleTile;
         turnCounter++;
         $('h2').html('Turns: ' + turnCounter);
+        tiles.forEach(function(tile){
+            tile.removeEventListener('click', flipTile);
+        })
     }
 }
 
