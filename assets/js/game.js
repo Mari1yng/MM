@@ -50,6 +50,10 @@ function flipTile() {
 
         if (visibleTiles[0].className === visibleTiles[1].className) {
             cardsMatched++;
+            visibleTiles.forEach(function(tile){
+                tile.classList.add('removed');
+            });
+
 
         } else {
             visibleTiles.forEach(function(tile){
@@ -57,8 +61,8 @@ function flipTile() {
             });
         };
         tiles.forEach(function(tile){
-            tile.addEventListener('click', flipTile);    
-        }); 
+            tile.addEventListener('click', flipTile);
+        });   
     }
 }
 
@@ -72,7 +76,7 @@ function startGame(){
 let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
-        deck = deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
+        deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
         deck.allCardsShuffle();
         createGrid ();
         tiles=[...document.getElementsByClassName('tile')];
