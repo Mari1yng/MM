@@ -34,7 +34,7 @@ function createGrid (){
 
 // Function that will allow for click sound to be played when tile is flipped
 function playClickSound() {
-
+    $('audio#tilesound')[0].play();
 }
 
 //Function that will filter all cards and find these with class "removed" and remove them from tiles array
