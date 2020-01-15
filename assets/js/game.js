@@ -10,17 +10,16 @@ let turnCounter = 0;
 let cardsMatched = 0;
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
-Array.prototype.allCardsShuffle = function() {
+function shuffle(arr) {
     let newPosition;
     let tempVar;
-    let i = this.length;
-
-    while (-- i > 0) {
+    for (let i = arr.length - 1; i > 0; i--){
         newPosition = Math.floor(Math.random() * (i + 1));
-        tempVar = this[newPosition];
-        this[newPosition] = this[i];
-        this[i] = tempVar
-    } return this;
+        tempVar = arr[i];
+        arr[i] = arr[newPosition];
+        arr[newPosition]= tempVar
+    }
+    return arr;
 };
 
 //Function that will create new grid
@@ -88,21 +87,21 @@ let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
         deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
-        deck.allCardsShuffle();
-        createGrid ();
+        shuffle(deck);
+        createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
-        deck.allCardsShuffle();
-        createGrid ();
+        shuffle(deck)
+        createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
 
     } else {
         deck = allCards;
-        deck.allCardsShuffle();
-        createGrid ();
+        shuffle(deck);
+        createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
   
