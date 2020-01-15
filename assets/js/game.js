@@ -47,25 +47,27 @@ function flipTile() {
         tiles.forEach(function (tile) {
             tile.removeEventListener('click', flipTile);
         });
-        if (visibleTiles[0].className === visibleTiles[1].className) {
-            cardsMatched++;
-            visibleTiles.forEach(function (tile) {
-                tile.classList.add('removed');
-            });
-            if (cardsMatched == deck.length/2) {
-                alert("You've won in only " + turnCounter + " turns! try again :)");
+        setTimeout (function (){
+            if (visibleTiles[0].className === visibleTiles[1].className) {
+                cardsMatched++;
+                visibleTiles.forEach(function (tile) {
+                    tile.classList.add('removed');
+                });
+                if (cardsMatched == deck.length/2) {
+                    alert("You've won in only " + turnCounter + " turns! try again :)");
+                };
+    
+            } else {
+                visibleTiles.forEach(function (tile) {
+                    tile.classList.add('hidden');
+                });
             };
-
-        } else {
-            visibleTiles.forEach(function (tile) {
-                tile.classList.add('hidden');
+            tiles.forEach(function (tile) {
+                tile.addEventListener('click', flipTile);
             });
-        };
-        tiles.forEach(function (tile) {
-            tile.addEventListener('click', flipTile);
-        });
-        visibleTiles = [];
-    }
+            visibleTiles = [];
+            }, 750);
+        }
 }
 
 function startGame(){
