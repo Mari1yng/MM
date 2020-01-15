@@ -50,7 +50,7 @@ function flipTile() {
     } else {
         visibleTiles[1] = visibleTile;
         turnCounter++;
-        $('h2').html('Turns: ' + turnCounter);
+        $('h3').html('Turns: ' + turnCounter);
         tiles.forEach(function (tile) {
             tile.removeEventListener('click', flipTile);
         });
@@ -64,7 +64,7 @@ function flipTile() {
                 if (cardsMatched == deck.length/2) {
                     alert("You've won in only " + turnCounter + " turns! try again :)");
                     turnCounter= 0;
-                    $('h2').html('Turns: ' + turnCounter);
+                    $('h3').html('Turns: ' + turnCounter);
                     resetGame();
                 };
     
