@@ -36,9 +36,9 @@ function disableCards(){
     tiles = tiles.filter(val => !val.classList.contains('removed'));
 };
 
-
+//Function that will reset the game 
 function resetGame(){
-
+    location.reload();
 }
 //Function that will start flipping the tiles
 function flipTile() {
