@@ -36,6 +36,10 @@ function disableCards(){
     tiles = tiles.filter(val => !val.classList.contains('removed'));
 };
 
+
+function resetGame(){
+
+}
 //Function that will start flipping the tiles
 function flipTile() {
     visibleTile = this;
@@ -91,6 +95,7 @@ let clickedButton = function(){
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
+
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
         shuffle(deck)
@@ -104,7 +109,7 @@ let clickedButton = function(){
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
-  
+        
     }
 }
 
