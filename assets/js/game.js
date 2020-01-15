@@ -60,6 +60,8 @@ function flipTile() {
                 disableCards();
                 if (cardsMatched == deck.length/2) {
                     alert("You've won in only " + turnCounter + " turns! try again :)");
+                    turnCounter= 0;
+                    $('h2').html('Turns: ' + turnCounter);
                 };
     
             } else {
