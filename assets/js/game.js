@@ -65,6 +65,7 @@ function flipTile() {
                     alert("You've won in only " + turnCounter + " turns! try again :)");
                     turnCounter= 0;
                     $('h2').html('Turns: ' + turnCounter);
+                    resetGame();
                 };
     
             } else {
