@@ -89,6 +89,7 @@ function flipTile() {
 }
 
 function startGame(){
+    $('.tile').click(playClickSound);
     tiles.forEach(function(tile){
         tile.addEventListener('click', flipTile);
     });
