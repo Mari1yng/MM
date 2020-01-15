@@ -31,6 +31,12 @@ function createGrid (){
     }; 
     document.getElementById('board').innerHTML = newGrid;
 }
+
+// Function that will allow for click sound to be played when tile is flipped
+function playClickSound() {
+
+}
+
 //Function that will filter all cards and find these with class "removed" and remove them from tiles array
 function disableCards(){
     tiles = tiles.filter(val => !val.classList.contains('removed'));
