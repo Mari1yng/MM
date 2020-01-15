@@ -14,12 +14,16 @@
 <body>
     <div class="container">
         <div class="row">
+            <!-- Header section-->
             <div class="col-12 mx-auto">
                 <h1>AWESOME</h1>
                 <p class="mb-0">80s Memory game</p>
             </div>
-            <div class="col-sm-12 col-md-3 pb-4 mx-auto py-sm-3 py-md-0 py-lg-5" >
+
+            <div class="col-sm-12 col-md-3 pb-4 mx-auto py-sm-3 py-md-0 py-lg-5">
+                <!-- Turn counter-->
                 <h3 class="pl-lg-3">Turns: 0</h3>
+                <!-- Difficulty buttons section-->
                 <div class="buttondiv">
                     <button type="button" class="btn easybtn btn-lg p-2 mx-2">Easy</button>
                 </div>
@@ -30,13 +34,14 @@
                     <button type="button" class="btn hardbtn btn-lg p-2 mx-2">Hard</button>
                 </div>
             </div>
+            <!-- Cards section -->
             <div class="col-sm-12 col-md-9 mx-auto" id="board">
 
             </div>
         </div>
-        
+        <!-- Audio Files-->
         <audio id="tilesound" src="assets/audio/sound.mp3" type="audio/mpeg"></audio>
-
+        <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
