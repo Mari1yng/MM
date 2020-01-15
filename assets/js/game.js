@@ -57,6 +57,7 @@ function flipTile() {
                 visibleTiles.forEach(function (tile) {
                     tile.classList.add('removed');
                 });
+                disableCards();
                 if (cardsMatched == deck.length/2) {
                     alert("You've won in only " + turnCounter + " turns! try again :)");
                 };
