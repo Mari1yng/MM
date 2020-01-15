@@ -32,6 +32,9 @@ function createGrid (){
     }; 
     document.getElementById('board').innerHTML = newGrid;
 }
+function disableCards(){
+
+};
 
 //Function that will start flipping the tiles
 function flipTile() {
