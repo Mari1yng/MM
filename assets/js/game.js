@@ -40,6 +40,7 @@ function disableCards(){
 function resetGame(){
     location.reload();
 }
+
 //Function that will start flipping the tiles
 function flipTile() {
     visibleTile = this;
@@ -84,7 +85,8 @@ function flipTile() {
 function startGame(){
     tiles.forEach(function(tile){
         tile.addEventListener('click', flipTile);
-    })
+    });
+    
 }
 
 //Function that acts when easy, medium and hard difficulty buttons are clicked
