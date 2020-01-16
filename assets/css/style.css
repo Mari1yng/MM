@@ -66,7 +66,7 @@ p {
 
 div#board {
     background-color: rgba(0, 0, 0, 0);
-    max-width: 580px;
+    max-width: 500px;
     padding: 5px;
     margin: 0px auto;;
 }
@@ -128,8 +128,8 @@ div#board > div {
         text-align: center;
     }  
     div#board > div {
-        height: 125px;
-        width: 125px;
+        height: 100px;
+        width: 100px;
     }
     h1 {
         font-size: 64px;
