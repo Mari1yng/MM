@@ -8,6 +8,8 @@ let activeButton;
 let deck;
 let turnCounter = 0;
 let cardsMatched = 0;
+let timeLeft = 75;
+
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
 function shuffle(arr) {
