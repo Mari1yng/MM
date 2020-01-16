@@ -32,4 +32,8 @@ Awesome 80s memory card game is not only entertaining but it is also having educ
 - playing game that can introduce my children to characters I knew as a child 
 - playing game that can remind me of the characters I grew up knowing
 
+#### Wireframes
+Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
+
+
 
