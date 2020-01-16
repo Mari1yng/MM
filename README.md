@@ -40,3 +40,6 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 #### Color scheme
 Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that's associated with popular TV series Miami Vice where main characters were wearing colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. Another association with 1980s color scheme and known to younger generation is released in early 2000s game Grand Theft Auto (GTA) Vice City that placed it's story in 1986. There is no color scheme more 80s than neon.
 
+#### Fonts
+Font [Neon](https://www.dafont.com/neon.font),font [Beastform](https://www.dafont.com/beastform.font) that created main header as well as font [Audiowide](https://fonts.google.com/specimen/Audiowide) on this page are very reminiscent of 1980s.
+
