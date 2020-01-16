@@ -28,7 +28,9 @@ function shuffle(arr) {
 function countDown(){
     if (timeLeft > 0){
         timeLeft--;
-    } else {};
+    } else {
+        alert('Game Over')
+    };
     document.getElementById('timer').innerHTML = timeLeft + 's left';
 }
 //Function that will create new grid
@@ -38,6 +40,9 @@ function createGrid (){
     for (i = 0; i < deck.length; i++){
     newGrid += '<div class="tile '+ deck[i] + ' hidden"></div>';
     }; 
+    if (deck.length === 16){
+        let timer = setInterval(countDown, 1000);
+    };
     document.getElementById('board').innerHTML = newGrid;
 }
 
