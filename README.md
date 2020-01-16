@@ -1,5 +1,4 @@
-# Awesome 
-# 80' memory game 
+# Awesome  80' memory game 
 Entertaining memory card game. User is required to match 2 cards in order to progress with the game. Score counter allows users to beat own results and finish the game in less turns each time.
 
 # UX
@@ -20,4 +19,10 @@ Awesome 80s memory card game meets all the needs above because it provides intui
 ### Site user's goals - adults
 
 ### User stories
+- playing game to kill spare time (eg. during travel etc.)
+- game that is easy enough for my chldren to operate
+- playing the game that is visually appealing 
+- playing game that can introduce my children to characters I knew as a child 
+- playing game that can remind me of the characters I grew up knowing
+
 
