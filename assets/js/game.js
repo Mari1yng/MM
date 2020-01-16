@@ -22,6 +22,10 @@ function shuffle(arr) {
     return arr;
 };
 
+// CountDown will allow for time to be counted down on level hard for added difficulty
+function countDown(){
+
+}
 //Function that will create new grid
 function createGrid (){
     let newGrid = '';
