@@ -28,7 +28,8 @@ function shuffle(arr) {
 function countDown(){
     if (timeLeft > 0){
         timeLeft--;
-    } else {}
+    } else {};
+    document.getElementById('timer').innerHTML = timeLeft + 's left';
 }
 //Function that will create new grid
 function createGrid (){
