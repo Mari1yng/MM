@@ -26,7 +26,9 @@ function shuffle(arr) {
 
 // CountDown will allow for time to be counted down on level hard for added difficulty
 function countDown(){
-
+    if (timeLeft > 0){
+        timeLeft--;
+    } else {}
 }
 //Function that will create new grid
 function createGrid (){
