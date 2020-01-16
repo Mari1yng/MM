@@ -35,5 +35,8 @@ Awesome 80s memory card game is not only entertaining but it is also having educ
 #### Wireframes
 Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
 
+## Design decisions
 
+#### Color scheme
+Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that's associated with popular TV series Miami Vice where main characters were wearing colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. Another association with 1980s color scheme and known to younger generation is released in early 2000s game Grand Theft Auto (GTA) Vice City that placed it's story in 1986. There is no color scheme more 80s than neon.
 
