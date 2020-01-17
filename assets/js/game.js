@@ -1,5 +1,5 @@
 let allCards = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
-let buttons = [...document.getElementsByTagName('button')];
+let buttons = [...document.getElementsByClassName('difficulty')];
 let tiles;
 
 let visibleTiles = [];
