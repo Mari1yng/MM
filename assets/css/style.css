@@ -36,7 +36,7 @@ h1 {
     color: #f6019d;
 }
 
-p {
+#headerp {
     font-family: 'beastform';
     letter-spacing: 6px;
     font-weight: 600;
@@ -134,7 +134,7 @@ div#board > div {
     h1 {
         font-size: 64px;
     }
-    p {
+    #headerp {
         font-size: 52px;
     }
 }

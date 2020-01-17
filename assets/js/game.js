@@ -103,7 +103,7 @@ function flipTile() {
 
 function startGame(){
     if (deck.length === 16){
-        timeLeft = 15;
+        timeLeft = 75;
         let timer = setInterval(countDown, 1000);
     } else { 
         clearInterval(timer);
