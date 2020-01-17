@@ -8,7 +8,7 @@ let activeButton;
 let deck;
 let turnCounter = 0;
 let cardsMatched = 0;
-let timeLeft = 75;
+let timeLeft;
 
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
@@ -26,12 +26,14 @@ function shuffle(arr) {
 
 // CountDown will allow for time to be counted down on level hard for added difficulty
 function countDown(){
-    if (timeLeft > 0){
+    if (timeLeft > 0 && deck.length === 16){
         timeLeft--;
+        document.getElementById('timer').innerHTML = timeLeft + 's left';
     } else {
-        alert('Game Over')
+        document.getElementById('timer').innerHTML = ''; 
+        resetGame();       
     };
-    document.getElementById('timer').innerHTML = timeLeft + 's left';
+    
 }
 //Function that will create new grid
 function createGrid (){
@@ -115,21 +117,21 @@ let clickedButton = function(){
     activeButton = this;
     if ($(this).hasClass('easybtn')){
         deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
-        shuffle(deck);
+        shuffle(deck);        
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
 
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
-        shuffle(deck)
+        shuffle(deck);        
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
 
     } else {
         deck = allCards;
-        shuffle(deck);
+        shuffle(deck);       
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
         startGame();
