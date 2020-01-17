@@ -42,9 +42,6 @@ function createGrid (){
     for (i = 0; i < deck.length; i++){
     newGrid += '<div class="tile '+ deck[i] + ' hidden"></div>';
     }; 
-    if (deck.length === 16){
-        let timer = setInterval(countDown, 1000);
-    };
     document.getElementById('board').innerHTML = newGrid;
 }
 
@@ -105,6 +102,12 @@ function flipTile() {
 }
 
 function startGame(){
+    if (deck.length === 16){
+        timeLeft = 15;
+        let timer = setInterval(countDown, 1000);
+    } else { 
+        clearInterval(timer);
+    };
     $('.tile').click(playClickSound);
     tiles.forEach(function(tile){
         tile.addEventListener('click', flipTile);
