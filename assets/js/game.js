@@ -70,15 +70,15 @@ function flipTile() {
     } else { 
         visibleTiles[1] = visibleTile;
         if (visibleTiles[0].id === visibleTiles[1].id){
-
-        } else {
             
+        } else {
+            turnCounter++;
+            $('h3').html('Turns: ' + turnCounter);
+            tiles.forEach(function (tile) {
+                tile.removeEventListener('click', flipTile);
+            });
         }
-        turnCounter++;
-        $('h3').html('Turns: ' + turnCounter);
-        tiles.forEach(function (tile) {
-            tile.removeEventListener('click', flipTile);
-        });
+        
         setTimeout (function (){
             if (visibleTiles[0].className === visibleTiles[1].className && visibleTiles[0].id != visibleTiles[1].id) {
                 cardsMatched++;
