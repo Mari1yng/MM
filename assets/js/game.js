@@ -30,7 +30,9 @@ function countDown(){
     if (timeLeft > 0){
         timeLeft--;
         timerDisplay.innerHTML = timeLeft + 's left';
-    } 
+    } else {
+        resetGame();
+    }
 }
 
 //Function that will create new grid
