@@ -9,7 +9,8 @@ let deck;
 let turnCounter = 0;
 let cardsMatched = 0;
 let timeLeft;
-
+let timer;
+let timerDisplay = document.getElementById('timer');
 
 // Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
 function shuffle(arr) {
@@ -26,16 +27,12 @@ function shuffle(arr) {
 
 // CountDown will allow for time to be counted down on level hard for added difficulty
 function countDown(){
-    if (timeLeft > 0 && deck.length === 16){
+    if (timeLeft > 0){
         timeLeft--;
-        document.getElementById('timer').innerHTML = timeLeft + 's left';
-    } else {
-        timeLeft = 0;
-        document.getElementById('timer').innerHTML = ''; 
-        startGame();
-    };
-    
+        timerDisplay.innerHTML = timeLeft + 's left';
+    } 
 }
+
 //Function that will create new grid
 function createGrid (){
     let newGrid = '';
@@ -111,9 +108,10 @@ function flipTile() {
 function startGame(){
     if (deck.length === 16){
         timeLeft = 60;
-        let timer = setInterval(countDown, 1000);
+        timer = setInterval(countDown, 1000);
     } else { 
         clearInterval(timer);
+        timerDisplay.innerHTML = ''; 
     };
     $('.tile').click(playClickSound);
     tiles.forEach(function(tile){
