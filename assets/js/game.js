@@ -31,7 +31,7 @@ function countDown(){
         document.getElementById('timer').innerHTML = timeLeft + 's left';
     } else {
         document.getElementById('timer').innerHTML = ''; 
-        resetGame();       
+        startGame();       
     };
     
 }
@@ -109,7 +109,7 @@ function flipTile() {
 
 function startGame(){
     if (deck.length === 16){
-        timeLeft = 75;
+        timeLeft = 60;
         let timer = setInterval(countDown, 1000);
     } else { 
         clearInterval(timer);
