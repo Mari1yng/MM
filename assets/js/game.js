@@ -30,8 +30,9 @@ function countDown(){
         timeLeft--;
         document.getElementById('timer').innerHTML = timeLeft + 's left';
     } else {
+        timeLeft = 0;
         document.getElementById('timer').innerHTML = ''; 
-        startGame();       
+        startGame();
     };
     
 }
