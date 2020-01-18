@@ -67,10 +67,11 @@ function flipTile() {
     if (visibleTiles.length == 0) {
         visibleTiles[0] = visibleTile;
         return;
-    } else { 
+    } else {
         visibleTiles[1] = visibleTile;
-        if (visibleTiles[0].id === visibleTiles[1].id){
-            
+        if (visibleTiles[0].id === visibleTiles[1].id) {
+            visibleTiles[0] = visibleTile;
+            return;
         } else {
             turnCounter++;
             $('h3').html('Turns: ' + turnCounter);
@@ -78,21 +79,21 @@ function flipTile() {
                 tile.removeEventListener('click', flipTile);
             });
         }
-        
-        setTimeout (function (){
+
+        setTimeout(function () {
             if (visibleTiles[0].className === visibleTiles[1].className && visibleTiles[0].id != visibleTiles[1].id) {
                 cardsMatched++;
                 visibleTiles.forEach(function (tile) {
                     tile.classList.add('removed');
                 });
                 disableCards();
-                if (cardsMatched == deck.length/2) {
+                if (cardsMatched == deck.length / 2) {
                     alert("You've won in only " + turnCounter + " turns! try again :)");
-                    turnCounter= 0;
+                    turnCounter = 0;
                     $('h3').html('Turns: ' + turnCounter);
                     resetGame();
                 };
-    
+
             } else {
                 visibleTiles.forEach(function (tile) {
                     tile.classList.add('hidden');
@@ -102,8 +103,8 @@ function flipTile() {
                 tile.addEventListener('click', flipTile);
             });
             visibleTiles = [];
-            }, 750);
-        }
+        }, 750);
+    }
 }
 
 function startGame(){
