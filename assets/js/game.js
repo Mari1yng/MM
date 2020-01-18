@@ -69,6 +69,11 @@ function flipTile() {
         return;
     } else { 
         visibleTiles[1] = visibleTile;
+        if (visibleTiles[0].id === visibleTiles[1].id){
+
+        } else {
+            
+        }
         turnCounter++;
         $('h3').html('Turns: ' + turnCounter);
         tiles.forEach(function (tile) {
