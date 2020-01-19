@@ -57,7 +57,7 @@
 <!-- Modals-->
 
 <!--Welcome modal-->
-<div class="modal" id="welcomemodal" tabindex="-1" role="dialog">
+<div class="modal" id="welcomeModal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content welcomeModalContent">
         <div class="modal-header">
@@ -73,12 +73,30 @@
           <p class="modaltext">3. If you matched all pairs - You've won!</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn welcomemodalbtn" data-dismiss="modal">Close</button>
+          <button type="button" class="btn welcomeModalBtn" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-
+  <!--Game over modal-->
+  <div class="modal" id="gameOverModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content gameOverModalContent">
+        <div class="modal-header">
+          <h5 class="modal-title">GAME OVER</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="gameOverModalText"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn gameOverModalBtn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
         <!-- Audio Files-->
         <audio id="tilesound" src="assets/audio/sound.mp3" type="audio/mpeg"></audio>
