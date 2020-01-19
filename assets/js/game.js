@@ -159,5 +159,5 @@ let checkButton = function (){
 checkButton();  
 
 function welcomeModal(){
-    $('#welcomemodal').modal('show');
+    $('#welcomeModal').modal('show');
 }
