@@ -1,3 +1,5 @@
+//Variables
+
 let allCards = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
 let buttons = [...document.getElementsByClassName('difficulty')];
 let tiles;
@@ -12,7 +14,7 @@ let timeLeft;
 let timer;
 let timerDisplay = document.getElementById('timer');
 
-// Shuffle all cards using Fisher-Yates shuffle algorithm and array.ptototype
+// Shuffle all cards using Fisher-Yates shuffle algorithm
 function shuffle(arr) {
     let newPosition;
     let tempVar;
@@ -169,4 +171,5 @@ function gameOver(){
 
 function winAlert(){
     $('#winModal').modal('show');
+    $('.winModalBtn').click(resetGame);
 }
