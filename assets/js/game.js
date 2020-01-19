@@ -163,5 +163,5 @@ function welcomeModal(){
 }
 
 function gameOver(){
-    
+    $('#gameOverModal').modal('show');
 }
