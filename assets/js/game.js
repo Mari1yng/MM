@@ -164,4 +164,5 @@ function welcomeModal(){
 
 function gameOver(){
     $('#gameOverModal').modal('show');
+    $('#closeGameOver').click(resetGame);
 }
