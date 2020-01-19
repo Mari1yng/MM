@@ -35,6 +35,10 @@ body {
     background-color: #261447;
 }
 
+.gameOverModalContent {
+    background-color: #f9c80e;
+}
+
 /*Header styling */
 h1 {
     text-align: center;
@@ -54,7 +58,7 @@ h1 {
     display: inline;
 }
 
-.btn, .welcomeModalContent {
+.btn, .welcomeModalContent, .gameOverModalContent {
     letter-spacing: 1px;
     color: #2de2e6;
 }
