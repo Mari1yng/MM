@@ -25,13 +25,16 @@
                 <h3 class="pl-lg-3 text-center">Turns: 0</h3>
                 <!-- Difficulty buttons section-->
                 <div class="buttondiv">
-                    <button type="button" aria-label="Level easy" class="btn difficulty easybtn btn-lg p-2 mx-2">Easy</button>
+                    <button type="button" aria-label="Level easy"
+                        class="btn difficulty easybtn btn-lg p-2 mx-2">Easy</button>
                 </div>
                 <div class="buttondiv">
-                    <button type="button" aria-label="Level medium" class="btn difficulty mediumbtn btn-lg p-2 mx-2">Medium</button>
+                    <button type="button" aria-label="Level medium"
+                        class="btn difficulty mediumbtn btn-lg p-2 mx-2">Medium</button>
                 </div>
                 <div class="buttondiv">
-                    <button type="button" aria-label="Level hard" class="btn difficulty hardbtn btn-lg p-2 mx-2">Hard</button>
+                    <button type="button" aria-label="Level hard"
+                        class="btn difficulty hardbtn btn-lg p-2 mx-2">Hard</button>
                 </div>
                 <h2 class="text-center" id="timer"></h2>
             </div>
@@ -44,53 +47,74 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-4 text-center small">
-                    
+
                 </div>
                 <div class="col-sm-12 col-md-4 text-center small">
-                    
+
                 </div>
                 <div class="col-sm-12 col-md-4 text-center small">
                     <p>© 2020 Copyright: MalC-U - all rights reserved</p>
                 </div>
             </div>
         </div>
-<!-- Modals-->
+        <!-- Modals-->
 
-<!--Welcome modal-->
-<div class="modal" id="welcomeModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content welcomeModalContent">
-        <div class="modal-header">
-          <h5 class="modal-title">How to play</h5>
-          <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <!--Welcome modal-->
+        <div class="modal" id="welcomeModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content welcomeModalContent">
+                    <div class="modal-header">
+                        <h5 class="modal-title">How to play</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modaltext">1. Pick difficulty level.</p>
+                        <p class="modaltext">2. Flip 2 cards at a time to find a match.</p>
+                        <p class="modaltext">Level hard - match all pairs within 60s time limit.</p>
+                        <p class="modaltext">3. If you matched all pairs - You've won!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn welcomeModalBtn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <p class="modaltext">1. Pick difficulty level.</p>
-          <p class="modaltext">2. Flip 2 cards at a time to find a match.</p>
-          <p class="modaltext">Level hard - match all pairs within 60s time limit.</p>
-          <p class="modaltext">3. If you matched all pairs - You've won!</p>
+
+        <!--Game over modal-->
+        <div class="modal" id="gameOverModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content gameOverModalContent">
+                    <div class="modal-header">
+                        <h5 class="modal-title px-4 mx-5 text-center">GAME OVER</h5>
+                        <button type="button" class="close" id="closeGameOver" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn welcomeModalBtn" data-dismiss="modal">Close</button>
+
+        <!--Win modal-->
+        <div class="modal" id="winModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content winModalContent">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title text-center">You have won!</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modaltext text-center"><i class="fas fa-trophy"></i></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn winModalBtn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!--Game over modal-->
-  <div class="modal" id="gameOverModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content gameOverModalContent">
-        <div class="modal-header">
-          <h5 class="modal-title px-4 mx-5 text-center">GAME OVER</h5>
-          <button type="button" class="close" id="closeGameOver" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
         <!-- Audio Files-->
         <audio id="tilesound" src="assets/audio/sound.mp3" type="audio/mpeg"></audio>
