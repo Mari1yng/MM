@@ -161,3 +161,7 @@ checkButton();
 function welcomeModal(){
     $('#welcomeModal').modal('show');
 }
+
+function gameOver(){
+    
+}
