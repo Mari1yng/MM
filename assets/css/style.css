@@ -30,7 +30,7 @@ body {
     justify-content: center;
 }
 
-/* Modal styling */
+/* Modals styling */
 .welcomeModalContent {
     background-color: #261447;
 }
@@ -39,6 +39,15 @@ body {
     background-color: #f9c80e;
     color: #f6019d;
     letter-spacing: 1px;
+}
+
+.winModalContent {
+    background-color: #0d0221;
+    letter-spacing: 2px;
+}
+
+.fa-trophy {
+    font-size: 72px;
 }
 
 /*Header styling */
