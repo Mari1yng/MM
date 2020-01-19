@@ -35,8 +35,10 @@ body {
     background-color: #261447;
 }
 
-.gameOverModalContent {
+.gameOverModalContent, #closeGameOver {
     background-color: #f9c80e;
+    color: #f6019d;
+    letter-spacing: 1px;
 }
 
 /*Header styling */
@@ -58,7 +60,7 @@ h1 {
     display: inline;
 }
 
-.btn, .welcomeModalContent, .gameOverModalContent {
+.btn, .welcomeModalContent {
     letter-spacing: 1px;
     color: #2de2e6;
 }
