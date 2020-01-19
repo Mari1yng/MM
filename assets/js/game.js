@@ -88,10 +88,10 @@ function flipTile() {
                 });
                 disableCards();
                 if (cardsMatched == deck.length / 2) {
-                    alert("You've won in only " + turnCounter + " turns! try again :)");
+                    winAlert();
                     turnCounter = 0;
                     $('h3').html('Turns: ' + turnCounter);
-                    resetGame();
+                    
                 };
 
             } else {
@@ -165,4 +165,8 @@ function welcomeModal(){
 function gameOver(){
     $('#gameOverModal').modal('show');
     $('#closeGameOver').click(resetGame);
+}
+
+function winAlert(){
+    $('#winModal').modal('show');
 }
