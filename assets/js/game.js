@@ -157,3 +157,7 @@ let checkButton = function (){
 }
 
 checkButton();  
+
+function welcomeModal(){
+   
+}
