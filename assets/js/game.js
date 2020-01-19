@@ -31,7 +31,7 @@ function countDown(){
         timeLeft--;
         timerDisplay.innerHTML = timeLeft + 's left';
     } else {
-        resetGame();
+        gameOver();
     }
 }
 
