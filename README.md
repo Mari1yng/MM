@@ -45,7 +45,17 @@ Background picture was picked to compliment Neon font and neon color scheme. At 
 
 #### Card images
 These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man). 
-These were complimented with 2 from the list of most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
+These were complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
 
 #### Wireframes
 Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
+
+## Features
+
+### Existing features
+1. Welcome modal - explaining how to play the game.
+2. Difficulty buttons allowing player to change how many cards they want to play - 8, 12 or 16.
+3. Turns counter - lets player know how many turns has it taken so far in this game.
+4. Board that displays cards in 4 columns and number of rows on computers, tablets and most phone devices.
+5. Timer - that allows user only 60 seconds to finish level hard. 
+6. Win modal that congratulates user winnign of the game - matching all cards.
