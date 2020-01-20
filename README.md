@@ -130,6 +130,13 @@ This test was done to make sure JavaScripts runs correctly (as desired) on these
 - Double clicking of the card was assigned as a card match - fixed
 - Game switched mid way was not resetting turn counter - fixed
 
+### Automated testing
+
+Following online validators were used to test the code:
+[W3C Markaup Validation Service](https://validator.w3.org/) for HTML validation
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS validation
+[JS Hint](https://jshint.com/) for JavaScript validation
+
 
 # Deployment
 
