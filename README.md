@@ -79,3 +79,16 @@ a. [GitHub](https://github.com/) - code stored and shared remotely,
 b. [Visual Studio Code](https://code.visualstudio.com/) - IDE,  
 c. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process, 
 e. [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code up to date
+
+# Testing
+
+# Deployment
+
+Deploying this page from GitHub repository to GitHub Pages was achieved by following these steps:
+1. Logging into GitHub
+2. Picking malc-u/memoryCardGame repository for the list of repositories
+3. Selecting Settings - from menu items on the top of the page (top, right hand corner)
+4. Scrolling dow to the GitHub Pages section
+5. Picking Master Branch from the "Source" drop-down menu in Github Pages (changing from the default "none" to master branch)
+6. Awaiting for the page to be refreshed and website to be deployed - this happens automatically when step 5 is actioned
+7. Scrolling back down to the GitHub Pages section to check/retrieve the link of newly deployed website
