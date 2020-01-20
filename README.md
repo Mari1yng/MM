@@ -43,5 +43,9 @@ Font [Neon](https://www.dafont.com/neon.font), font [Beastform](https://www.dafo
 #### Background
 Background picture was picked to compliment Neon font and neon color scheme. At the same time this picture was intended not to be overwhelming main game areas - difficulty buttons and board area.
 
+#### Card images
+These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man). 
+These were complimented with 2 from the list of most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
+
 #### Wireframes
 Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
