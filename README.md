@@ -82,6 +82,22 @@ e. [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code 
 
 # Testing
 
+### Manual testing
+
+#### Tested reposivness in Chrome:
+Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile that they look as desired by the developer.
+
+Tested the pages on all sizes/devices available in Chrome.
+- 360 x 640 Blackberry Z30 & Galaxy Note
+- 375 x 812 iPhone X
+- 375 x 687 iPhone 6/7/8
+- 411 x 731 Pixel 2
+- 411 x 823 Pixel 2 XL
+- 414 x 736 iPhone 6/7/8 Plus
+- 600 x 1024 Blackberyy PlayBook
+- 768 x 1024 iPad
+- 1024 x 1366 iPad Pro
+
 # Deployment
 
 Deploying this page from GitHub repository to GitHub Pages was achieved by following these steps:
