@@ -221,3 +221,8 @@ function winAlert(){
     $('#winModal').modal('show');
     $('.winModalBtn').click(resetGame);
 }
+
+//Function that allows to open winModal again - after question mark in the footer clicked
+$('.fa-question-circle').click(function(){
+    welcomeModal();
+})
