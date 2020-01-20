@@ -116,7 +116,19 @@ This test was done to make sure JavaScripts runs correctly (as desired) on these
 4. Changed difficulty level from hard to other one and then returning to hard trying to overlap setInterval timer function for the timer to count down quicker than every second
 5. Picking the same level and uncovering the same card in a grid hoping card deck stays unshuffled
 6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain unshuffled
-7. Changing level mid way playing the game hoping for the turn counter to remain unchanged   
+7. Changing level mid way playing the game hoping for the turn counter to remain unchanged
+
+#### Testing summary:
+
+##### Responsiveness problems:
+- Difficulty buttons were movind from inline to block early, when the board was still underneath them not to the right. This was very bad UX - changed media in css
+
+##### Interaction problems:
+- no problems recorded
+
+##### Game logic problems:
+- Double clicking of the card was assigned as a card match - fixed
+- Game switched mid way was not resetting turn counter - fixed
 
 
 # Deployment
