@@ -94,7 +94,7 @@ Tested the pages on all sizes/devices available in Chrome.
 - 411 x 731 Pixel 2
 - 411 x 823 Pixel 2 XL
 - 414 x 736 iPhone 6/7/8 Plus
-- 600 x 1024 Blackberyy PlayBook
+- 600 x 1024 Blackberry PlayBook
 - 768 x 1024 iPad
 - 1024 x 1366 iPad Pro
 
@@ -107,6 +107,17 @@ Page buttons were tested for correct operation and whether they operated and ope
 5. Clicking close in win modal reloads the game
 6. clicking close in game over modal reloads the game
 7. Clicking close in welcome modal closes it allowing for the difficulty level to be picked 
+
+#### Tested game logic using using Chrome, Firefox and Opera(mobile):
+This test was done to make sure JavaScripts runs correctly (as desired) on these browsers.
+1. Attempted to click more than 2 cards in 1 turn
+2. Attempted to double click in order to acheive a match on 1 card
+3. Tried to change difficulty levels many times in order for grid to be created incorrectly
+4. Changed difficulty level from hard to other one and then returning to hard trying to overlap setInterval timer function for the timer to count down quicker than every second
+5. Picking the same level and uncovering the same card in a grid hoping card deck stays unshuffled
+6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain unshuffled
+7. Changing level mid way playing the game hoping for the turn counter to remain unchanged   
+
 
 # Deployment
 
