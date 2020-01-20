@@ -173,6 +173,8 @@ let clickedButton = function(){
         shuffle(deck);        
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
+        turnCounter = 0;
+        $('h3').html('Turns: ' + turnCounter);
         startGame();
 /** Medium level picked, assigns only 12 tiles and 12 cards to the deck, shuffles deck and creates
  * grid then starts the game. 
@@ -182,6 +184,8 @@ let clickedButton = function(){
         shuffle(deck);        
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
+        turnCounter = 0;
+        $('h3').html('Turns: ' + turnCounter);
         startGame();
 /** Hard level picked, 16 tiles and cards in deck, creating grid and starts 
  * function startGame which assigns timer. */
@@ -190,6 +194,8 @@ let clickedButton = function(){
         shuffle(deck);       
         createGrid();
         tiles=[...document.getElementsByClassName('tile')];
+        turnCounter = 0;
+        $('h3').html('Turns: ' + turnCounter);
         startGame();
         
     }
