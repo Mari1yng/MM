@@ -27,7 +27,7 @@ Awesome 80s memory card game is not only entertaining but it is also having educ
 
 ### User stories
 - playing game to kill spare time (eg. during travel etc.)
-- game that is easy enough for my chldren to operate
+- game that is easy enough for my children to operate
 - playing the game that is visually appealing 
 - playing game that can introduce my children to characters I knew as a child 
 - playing game that can remind me of the characters I grew up knowing
@@ -58,7 +58,7 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 3. Turns counter - lets player know how many turns has it taken so far in this game.
 4. Board that displays cards in 4 columns and number of rows on computers, tablets and most phone devices.
 5. Timer - that allows user only 60 seconds to finish level hard. 
-6. Win modal that congratulates user winnign of the game - matching all cards.
+6. Win modal that congratulates user winning of the game - matching all cards.
 
 ### Features left to implement
 
@@ -85,7 +85,7 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 
 ### Manual testing
 
-#### Tested reposivness in Chrome:
+#### Tested responsiveness in Chrome:
 Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer.
 
 Tested the pages on all sizes/devices available in Chrome.
@@ -110,19 +110,19 @@ Page buttons were tested for correct operation and whether they operated and ope
 7. Clicking close in welcome modal closes it allowing for the difficulty level to be picked 
 
 #### Tested game logic using using Chrome, Firefox and Opera(mobile):
-This test was done to make sure JavaScripts runs correctly (as desired) on these browsers.
+This test was done to make sure JavaScript runs correctly (as desired) on these browsers.
 1. Attempted to click more than 2 cards in 1 turn
-2. Attempted to double click in order to acheive a match on 1 card
+2. Attempted to double click in order to achieve a match on 1 card
 3. Tried to change difficulty levels many times in order for grid to be created incorrectly
 4. Changed difficulty level from hard to other one and then returning to hard trying to overlap setInterval timer function for the timer to count down quicker than every second
-5. Picking the same level and uncovering the same card in a grid hoping card deck stays unshuffled
-6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain unshuffled
+5. Picking the same level and uncovering the same card in a grid hoping card deck stays not shuffled
+6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain not shuffled
 7. Changing level mid way playing the game hoping for the turn counter to remain unchanged
 
 #### Testing summary:
 
 ##### Responsiveness problems:
-- Difficulty buttons were movind from inline to block early, when the board was still underneath them not to the right. This was very bad UX - changed media in css
+- Difficulty buttons were moving from inline to block early, when the board was still underneath them not to the right. This was very bad UX - changed media in css
 
 ##### Interaction problems:
 - no problems recorded
@@ -155,7 +155,7 @@ Deploying this page from GitHub repository to GitHub Pages was achieved by follo
 1. Logging into GitHub
 2. Picking malc-u/memoryCardGame repository for the list of repositories
 3. Selecting Settings - from menu items on the top of the page (top, right hand corner)
-4. Scrolling dow to the GitHub Pages section
+4. Scrolling down to the GitHub Pages section
 5. Picking Master Branch from the "Source" drop-down menu in Github Pages (changing from the default "none" to master branch)
 6. Awaiting for the page to be refreshed and website to be deployed - this happens automatically when step 5 is actioned
 7. Scrolling back down to the GitHub Pages section to check/retrieve the link of newly deployed website
@@ -178,7 +178,7 @@ To clone this project from this repository following steps need to be taken:
 
 8. Press Enter to create your local clone 
 
-Futher reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+Further reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 # Credits
 
@@ -195,4 +195,4 @@ I have also used following:
 - [Pin Clipart](https://www.pinclipart.com/) - sourcing Bomb Jack picture
 - [Jing](https://www.jing.fm/) - sourcing card cover - palm picture
 - [DLPNG](https://dlpng.com/) - sourcing remaining pictures
-- [dafont.com](https://www.dafont.com/) - sourcing fonts that are used int he header
+- [dafont.com](https://www.dafont.com/) - sourcing fonts that are used in the header
