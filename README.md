@@ -72,20 +72,21 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 - [Bootstrap](https://getbootstrap.com/) - structuring the layout of the website and mobile first design, 
 - [Font Awesome](https://fontawesome.com/) - used in win modal,
 - [jQuery](https://jquery.com/) - used in places to simplify DOM manipulation, 
-- [Google Fonts](https://fonts.google.com/) - used to style website fonts
+- [Google Fonts](https://fonts.google.com/) - used to style website font
 
 3. Others:
 - [GitHub](https://github.com/) - code stored and shared remotely, 
 - [Visual Studio Code](https://code.visualstudio.com/) - IDE,  
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process, 
 - [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code up to date
+ - [Balsamiq](https://balsamiq.com/) - creating wireframes
 
 # Testing
 
 ### Manual testing
 
 #### Tested reposivness in Chrome:
-Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile that they look as desired by the developer.
+Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer.
 
 Tested the pages on all sizes/devices available in Chrome.
 - 360 x 640 Blackberry Z30 & Galaxy Note
@@ -140,7 +141,7 @@ Following online validators were used to test the code:
 #### Testing summary
 
 ##### HTML validation:
-It brought up no errors and 1 warning about empty header <h2> - this tag is used by JavaScript to display timer. Left unfixed.
+It brought up no errors and 1 warning about empty header h2 - this tag is used by JavaScript to display timer. Left unfixed.
 
 ##### CSS validation:
 No errors found.
@@ -178,3 +179,20 @@ To clone this project from this repository following steps need to be taken:
 8. Press Enter to create your local clone 
 
 Futher reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+# Credits
+
+The content of this page was written by me however following people & their work have influenced me and this project:
+- [Bartek Borowczyk](https://www.udemy.com/user/samuraj-programowania/) - mechanics of assigning, swapping classes for card matching and in general JavaScript tutorials
+- [Mike Bostock](https://bost.ocks.org/mike/) - mechanics of shuffling an array and Fisher–Yates Shuffle
+- [Eric Schwartz](https://medium.com/@ericschwartz7) - mechanics of adding sounds to the page
+- [Simen Daehlin](https://github.com/Eventyret) Code Institute mentor - overall aspect of the project
+
+I have also used following:
+- [Reddit](https://www.reddit.com/r/wallpaper/comments/acqekd/neon_gas_1920x1080/) - for sourcing background picture and [colors](https://www.reddit.com/user/-Space-Cadet-/)
+- [Freesound](https://freesound.org/) - for sourcing click sound
+- [Nintendo](http://mario.nintendo.com/)- sourcing pictures of Mario and Luigi
+- [Pin Clipart](https://www.pinclipart.com/) - sourcing Bomb Jack picture
+- [Jing](https://www.jing.fm/) - sourcing card cover - palm picture
+- [DLPNG](https://dlpng.com/) - sourcing remaining pictures
+- [dafont.com](https://www.dafont.com/) - sourcing fonts that are used int he header
