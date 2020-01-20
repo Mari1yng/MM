@@ -133,10 +133,20 @@ This test was done to make sure JavaScripts runs correctly (as desired) on these
 ### Automated testing
 
 Following online validators were used to test the code:
-[W3C Markaup Validation Service](https://validator.w3.org/) for HTML validation
-[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS validation
-[JS Hint](https://jshint.com/) for JavaScript validation
+- [W3C Markaup Validation Service](https://validator.w3.org/) for HTML validation
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS validation
+- [JS Hint](https://jshint.com/) for JavaScript validation
 
+#### Testing summary
+
+##### HTML validation:
+It brought up no errors and 1 warning about empty header <h2> - this tag is used by JavaScript to display timer. Left unfixed.
+
+##### CSS validation:
+No errors found.
+
+##### JavaScript validation:
+Few semicolons missing - fixed.
 
 # Deployment
 
