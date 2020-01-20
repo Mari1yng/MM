@@ -50,7 +50,7 @@ These were complimented with 2 from the list of the most popular comic book char
 #### Wireframes
 Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
 
-## Features
+# Features
 
 ### Existing features
 1. Welcome modal - explaining how to play the game.
@@ -59,3 +59,23 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 4. Board that displays cards in 4 columns and number of rows on computers, tablets and most phone devices.
 5. Timer - that allows user only 60 seconds to finish level hard. 
 6. Win modal that congratulates user winnign of the game - matching all cards.
+
+### Features left to implement
+
+# Technologies
+1. Languages : 
+a. [HTML](https://www.w3schools.com/html/)
+b. [CSS](https://www.w3schools.com/css/) 
+c. [JavaScript](https://www.w3schools.com/js/)
+
+2. Libraries:
+a. [Bootstrap](https://getbootstrap.com/) - structuring the layout of the website and mobile first design
+b. [Font Awesome](https://fontawesome.com/) - used in win modal
+c. [jQuery](https://jquery.com/) - used in places to simplify DOM manipulation
+d. [Google Fonts](https://fonts.google.com/) - used to style website fonts
+
+3. Others:
+a. [GitHub](https://github.com/) - code stored and shared remotely
+b. [Visual Studio Code](https://code.visualstudio.com/) - IDE 
+c. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process
+e. [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code up to date
