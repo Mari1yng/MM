@@ -26,10 +26,10 @@ function shuffle(arr) {
         newPosition = Math.floor(Math.random() * (i + 1));
         tempVar = arr[i];
         arr[i] = arr[newPosition];
-        arr[newPosition] = tempVar
+        arr[newPosition] = tempVar;
     }
     return arr;
-};
+}
 
 /** CountDown function is set to add additional difficulty to the game
  * but only while level hard is picked. 
@@ -53,9 +53,9 @@ function countDown() {
 function createGrid() {
     let newGrid = '';
 // Making sure the grid is created from the available deck - after checkButton () ran
-    for (i = 0; i < deck.length; i++) {
+    for (let i = 0; i < deck.length; i++) {
         newGrid += '<div id="tile' + i + '"class="tile ' + deck[i] + ' hidden"></div>';
-    };
+    }
     document.getElementById('board').innerHTML = newGrid;
 }
 
@@ -72,7 +72,7 @@ function playClickSound() {
 
 function disableCards() {
     tiles = tiles.filter(val => !val.classList.contains('removed'));
-};
+}
 
 // Function that will reset the game 
 
@@ -86,7 +86,7 @@ function flipTile() {
     visibleTile = this;
     this.classList.remove('hidden');
 // Assigning first clicked tile to visibleTiles array and allowing another click
-    if (visibleTiles.length == 0) {
+    if (visibleTiles.length === 0) {
         visibleTiles[0] = visibleTile;
         return;
 // Assigning another tile, second click, to visibleTiles array
@@ -127,13 +127,13 @@ function flipTile() {
                     turnCounter = 0;
                     $('h3').html('Turns: ' + turnCounter);
 
-                };
+                }
 // Cards unmatched, making sure they are flipped back again and still in game
             } else {
                 visibleTiles.forEach(function (tile) {
                     tile.classList.add('hidden');
                 });
-            };
+            }
             tiles.forEach(function (tile) {
                 tile.addEventListener('click', flipTile);
             });
@@ -153,7 +153,7 @@ function startGame(){
     } else { 
         clearInterval(timer);
         timerDisplay.innerHTML = ''; 
-    };
+    }
     $('.tile').click(playClickSound);
     tiles.forEach(function(tile){
         tile.addEventListener('click', flipTile);
@@ -193,14 +193,14 @@ let clickedButton = function(){
         startGame();
         
     }
-}
+};
 
 //function that listens for which difficulty button is clicked
 let checkButton = function (){
     buttons.forEach(function(button){
         button.addEventListener('click', clickedButton);
     });
-}
+};
 
 //Calling  check button function that starts the game process
 checkButton();  
@@ -225,4 +225,4 @@ function winAlert(){
 //Function that allows to open winModal again - after question mark in the footer clicked
 $('.fa-question-circle').click(function(){
     welcomeModal();
-})
+});
