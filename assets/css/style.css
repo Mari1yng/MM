@@ -27,7 +27,9 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 /* Modals styling */
@@ -91,7 +93,7 @@ div#board {
     background-color: rgba(0, 0, 0, 0);
     max-width: 500px;
     padding: 5px;
-    margin: 0px auto;;
+    margin: 0px auto;
 }
 
 /*Cards styling*/
@@ -152,11 +154,6 @@ div#board > div {
 
 /* Media */ 
 @media (min-width: 600px) {
-    .buttondiv {
-        display: block;
-        padding: 25px;
-        text-align: center;
-    }  
     div#board > div {
         height: 100px;
         width: 100px;
@@ -167,4 +164,12 @@ div#board > div {
     #headerp {
         font-size: 52px;
     }
+}
+
+@media (min-width: 768px){
+    .buttondiv {
+        display: block;
+        padding: 25px;
+        text-align: center;
+    }  
 }
