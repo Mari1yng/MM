@@ -90,15 +90,18 @@ function turnCounterDisplay() {
 	$('h3').html('Turns: ' + turnCounter);
 }
 
+function removeCardsFromDeck(){
+    cardsUncovered.forEach(function (tile) {
+        tile.classList.add('removed');
+    });
+}
 
 function delayCardFlippingBack(){
     setTimeout(function () {
         if (cardsUncovered[0].className === cardsUncovered[1].className 
             && cardsUncovered[0].id != cardsUncovered[1].id) {
             cardsMatched++;
-            cardsUncovered.forEach(function (tile) {
-                tile.classList.add('removed');
-            });
+            removeCardsFromDeck();
             disableCards();
             if (cardsMatched == deck.length / 2) {
                 winAlert();
