@@ -1,34 +1,34 @@
 // Variables
 
-let allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
-let buttons = [...document.getElementsByClassName('difficulty')];
-let tiles;
-
+const allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
+const difficultyButtons = [...document.getElementsByClassName('difficulty')];
+const timerDisplay = document.getElementById('timer');
+let turnCounter = 0;
+let cardsMatched = 0;
 let visibleTiles = [];
+let tiles;
 let visibleTile;
 let activeButton;
 let deck;
-let turnCounter = 0;
-let cardsMatched = 0;
 let timeLeft;
 let timer;
-let timerDisplay = document.getElementById('timer');
+
 
 /** Shuffle all cards using Fisher-Yates shuffle algorithm
  *  This function is called every time after difficulty was changed
  *  and card deck assigned 
  */
 
-function shuffle(arr) {
+function shuffle(cards) {
     let newPosition;
-    let tempVar;
-    for (let i = arr.length - 1; i > 0; i--) {
+    let presentElement;
+    for (let i = cards.length - 1; i > 0; i--) {
         newPosition = Math.floor(Math.random() * (i + 1));
-        tempVar = arr[i];
-        arr[i] = arr[newPosition];
-        arr[newPosition] = tempVar;
+        presentElement = cards[i];
+        cards[i] = cards[newPosition];
+        cards[newPosition] = presentElement;
     }
-    return arr;
+    return cards;
 }
 
 /** CountDown function is set to add additional difficulty to the game
@@ -203,7 +203,7 @@ let clickedButton = function(){
 
 //function that listens for which difficulty button is clicked
 let checkButton = function (){
-    buttons.forEach(function(button){
+    difficultyButtons.forEach(function(button){
         button.addEventListener('click', clickedButton);
     });
 };
