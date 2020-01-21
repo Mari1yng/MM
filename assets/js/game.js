@@ -5,8 +5,8 @@ const difficultyButtons = [...document.getElementsByClassName('difficulty')];
 const timerDisplay = document.getElementById('timer');
 let turnCounter = 0;
 let cardsMatched = 0;
-let visibleTiles = [];
-let tiles;
+let cardsUncovered = [];
+let tilesInGrid;
 let visibleTile;
 let activeButton;
 let deck;
@@ -71,7 +71,10 @@ function playClickSound() {
  */
 
 function disableCards() {
-    tiles = tiles.filter(val => !val.classList.contains('removed'));
+    tilesInGrid = tilesInGrid.filter(function (tile) {
+        return !tile.classList.contains('removed');
+    }); 
+
 }
 
 // Function that will reset the game 
@@ -86,17 +89,17 @@ function flipTile() {
     visibleTile = this;
     this.classList.remove('hidden');
 // Assigning first clicked tile to visibleTiles array and allowing another click
-    if (visibleTiles.length === 0) {
-        visibleTiles[0] = visibleTile;
+    if (cardsUncovered.length === 0) {
+        cardsUncovered[0] = visibleTile;
         return;
 // Assigning another tile, second click, to visibleTiles array
     } else {
-        visibleTiles[1] = visibleTile;
+        cardsUncovered[1] = visibleTile;
 /** Making sure second clicked tile is not the same one to prevent removing tile 
 * from the game after double clicking.
 */
-        if (visibleTiles[0].id === visibleTiles[1].id) {
-            visibleTiles[0] = visibleTile;
+        if (cardsUncovered[0].id === cardsUncovered[1].id) {
+            cardsUncovered[0] = visibleTile;
             return;
 /** If the cards are different - not the same, double-clicked card, 
 * the game proceeds and allows for the turn number to be adjusted, increased and 
@@ -105,7 +108,7 @@ function flipTile() {
         } else {
             turnCounter++;
             $('h3').html('Turns: ' + turnCounter);
-            tiles.forEach(function (tile) {
+            tilesInGrid.forEach(function (tile) {
                 tile.removeEventListener('click', flipTile);
             });
         }
@@ -114,9 +117,10 @@ function flipTile() {
 * unmatched card before being flipped back.
 */
         setTimeout(function () {
-            if (visibleTiles[0].className === visibleTiles[1].className && visibleTiles[0].id != visibleTiles[1].id) {
+            if (cardsUncovered[0].className === cardsUncovered[1].className 
+                && cardsUncovered[0].id != cardsUncovered[1].id) {
                 cardsMatched++;
-                visibleTiles.forEach(function (tile) {
+                cardsUncovered.forEach(function (tile) {
                     tile.classList.add('removed');
                 });
 // Making sure cards are removed from the deck to prevent double clicking
@@ -130,15 +134,15 @@ function flipTile() {
                 }
 // Cards unmatched, making sure they are flipped back again and still in game
             } else {
-                visibleTiles.forEach(function (tile) {
+                cardsUncovered.forEach(function (tile) {
                     tile.classList.add('hidden');
                 });
             }
-            tiles.forEach(function (tile) {
+            tilesInGrid.forEach(function (tile) {
                 tile.addEventListener('click', flipTile);
             });
 // Emptying visibleTiles to be able to match cards again in another turn
-            visibleTiles = [];
+            cardsUncovered = [];
         }, 750);
     }
 }
@@ -146,7 +150,8 @@ function flipTile() {
 /** Function that starts the game and checks which difficulty level has been
  * picked in order to assign countDown function and display timer or leave the timer out.
  */
-function startGame(){
+
+ function checkIfTimerNeeded(){
     if (deck.length === 16){
         timeLeft = 60;
         timer = setInterval(countDown, 1000);
@@ -154,8 +159,12 @@ function startGame(){
         clearInterval(timer);
         timerDisplay.innerHTML = ''; 
     }
+ }
+
+function startGame(){
+    checkIfTimerNeeded();
     $('.tile').click(playClickSound);
-    tiles.forEach(function(tile){
+    tilesInGrid.forEach(function(tile){
         tile.addEventListener('click', flipTile);
     });
     
@@ -172,7 +181,7 @@ let clickedButton = function(){
         deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
         shuffle(deck);        
         createGrid();
-        tiles=[...document.getElementsByClassName('tile')];
+        tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
         $('h3').html('Turns: ' + turnCounter);
         startGame();
@@ -183,7 +192,7 @@ let clickedButton = function(){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
         shuffle(deck);        
         createGrid();
-        tiles=[...document.getElementsByClassName('tile')];
+        tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
         $('h3').html('Turns: ' + turnCounter);
         startGame();
@@ -193,7 +202,7 @@ let clickedButton = function(){
         deck = allCards;
         shuffle(deck);       
         createGrid();
-        tiles=[...document.getElementsByClassName('tile')];
+        tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
         $('h3').html('Turns: ' + turnCounter);
         startGame();
