@@ -102,18 +102,24 @@ function returnCardsBackToDeck(){
     });
 }
 
-function delayCardFlippingBack(){
+function gameVictoryCheck(){
+    if (cardsMatched == deck.length / 2) {
+        winAlert();
+        turnCounter = 0;
+        turnCounterDisplay();
+    } else {
+        return;
+    }
+}
+
+function delayCardsFlippingBack(){
     setTimeout(function () {
         if (cardsUncovered[0].className === cardsUncovered[1].className 
             && cardsUncovered[0].id != cardsUncovered[1].id) {
             cardsMatched++;
             removeCardsFromDeck();
             disableCards();
-            if (cardsMatched == deck.length / 2) {
-                winAlert();
-                turnCounter = 0;
-                turnCounterDisplay();
-            }
+            gameVictoryCheck();
         } else {
             returnCardsBackToDeck();
         }
@@ -144,7 +150,7 @@ function flipTile() {
                 tile.removeEventListener('click', flipTile);
             });
         }
-        delayCardFlippingBack()
+        delayCardsFlippingBack()
     }
 }
 
