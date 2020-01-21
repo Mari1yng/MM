@@ -96,6 +96,12 @@ function removeCardsFromDeck(){
     });
 }
 
+function returnCardsBackToDeck(){
+    cardsUncovered.forEach(function (tile) {
+        tile.classList.add('hidden');
+    });
+}
+
 function delayCardFlippingBack(){
     setTimeout(function () {
         if (cardsUncovered[0].className === cardsUncovered[1].className 
@@ -109,9 +115,7 @@ function delayCardFlippingBack(){
                 turnCounterDisplay();
             }
         } else {
-            cardsUncovered.forEach(function (tile) {
-                tile.classList.add('hidden');
-            });
+            returnCardsBackToDeck();
         }
         tilesInGrid.forEach(function (tile) {
             tile.addEventListener('click', flipTile);
