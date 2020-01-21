@@ -12,8 +12,8 @@
 </head>
 
 <body onload="welcomeModal()">
-    <div class="container">
-        <div class="row">
+    <div class="container p-0 mx-auto">
+        <div class="row p-0 mx-auto">
             <!-- Header section-->
             <div class="col-12 mx-auto">
                 <h1>AWESOME</h1>
@@ -24,29 +24,33 @@
                 <!-- Turn counter-->
                 <h3 class="pl-lg-3 text-center py-2">Turns: 0</h3>
                 <!-- Difficulty buttons section-->
-                <div class="buttondiv">
-                    <button type="button" aria-label="Level easy"
-                        class="btn difficulty easybtn btn-lg p-2 mx-2">Easy</button>
-                </div>
-                <div class="buttondiv">
-                    <button type="button" aria-label="Level medium"
-                        class="btn difficulty mediumbtn btn-lg p-2 mx-2">Medium</button>
-                </div>
-                <div class="buttondiv">
-                    <button type="button" aria-label="Level hard"
-                        class="btn difficulty hardbtn btn-lg p-2 mx-2">Hard</button>
+                <div class="row m-0 p-0 justify-content-center">
+                    <div class="buttondiv">
+                        <button type="button" aria-label="Level easy"
+                            class="btn difficulty easybtn btn-lg p-2 mx-2">Easy</button>
+                    </div>
+                    <div class="buttondiv">
+                        <button type="button" aria-label="Level medium"
+                            class="btn difficulty mediumbtn btn-lg p-2 mx-2">Medium</button>
+                    </div>
+                    <div class="buttondiv">
+                        <button type="button" aria-label="Level hard"
+                            class="btn difficulty hardbtn btn-lg p-2 mx-2">Hard</button>
+                    </div>
                 </div>
                 <h2 class="text-center pt-3 pb-2" id="timer"></h2>
             </div>
             <!-- Cards section -->
-            <div class="col-sm-12 col-md-9 mx-auto pt-0" id="board">
-
+            <div class="col-sm-12 col-md-9 mx-auto pt-0">
+                <div class="row" id="board">
+                    
+                </div>
             </div>
         </div>
     </div>
     <!--Footer-->
-    <div class="container">
-        <div class="row">
+    <div class="container p-0 mx-auto">
+        <div class="row p-0 m-0">
             <div class="col-sm-12 col-md-4 text-center">
                 <i class="far fa-question-circle"></i>
             </div>
