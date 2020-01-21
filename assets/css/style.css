@@ -188,7 +188,7 @@ div#board > div {
     }  
 }
 
-@media (min-width: 1366px){
+@media (min-width: 1920px){
     div#board {
         max-width: 1000px;
         padding: 5px;
