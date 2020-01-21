@@ -54,7 +54,7 @@ function createGrid() {
     let newGrid = '';
 // Making sure the grid is created from the available deck - after checkButton () ran
     for (let i = 0; i < deck.length; i++) {
-        newGrid += '<div id="tile' + i + '"class="tile ' + deck[i] + ' hidden"></div>';
+        newGrid += '<div id="GridPositionNo' + (i+1) + '"class="mx-auto tile ' + deck[i] + ' hidden"></div>';
     }
     document.getElementById('board').innerHTML = newGrid;
 }
