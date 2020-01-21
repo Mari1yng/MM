@@ -90,28 +90,46 @@ function turnCounterDisplay() {
 	$('h3').html('Turns: ' + turnCounter);
 }
 
+
+function delayCardFlippingBack(){
+    setTimeout(function () {
+        if (cardsUncovered[0].className === cardsUncovered[1].className 
+            && cardsUncovered[0].id != cardsUncovered[1].id) {
+            cardsMatched++;
+            cardsUncovered.forEach(function (tile) {
+                tile.classList.add('removed');
+            });
+            disableCards();
+            if (cardsMatched == deck.length / 2) {
+                winAlert();
+                turnCounter = 0;
+                turnCounterDisplay();
+            }
+        } else {
+            cardsUncovered.forEach(function (tile) {
+                tile.classList.add('hidden');
+            });
+        }
+        tilesInGrid.forEach(function (tile) {
+            tile.addEventListener('click', flipTile);
+        });
+        cardsUncovered = [];
+    }, 750);
+}
+
 // Function that will allow flipping the tiles
 
 function flipTile() {
     visibleTile = this;
     this.classList.remove('hidden');
-// Assigning first clicked tile to visibleTiles array and allowing another click
     if (cardsUncovered.length === 0) {
         cardsUncovered[0] = visibleTile;
         return;
-// Assigning another tile, second click, to visibleTiles array
     } else {
         cardsUncovered[1] = visibleTile;
-/** Making sure second clicked tile is not the same one to prevent removing tile 
-* from the game after double clicking.
-*/
         if (cardsUncovered[0].id === cardsUncovered[1].id) {
             cardsUncovered[0] = visibleTile;
             return;
-/** If the cards are different - not the same, double-clicked card, 
-* the game proceeds and allows for the turn number to be adjusted, increased and 
-* displayed properly as well a removing possibility to click another-third card.
-*/
         } else {
             turnCounter++;
             turnCounterDisplay();
@@ -119,38 +137,7 @@ function flipTile() {
                 tile.removeEventListener('click', flipTile);
             });
         }
-/** Delaying game from proceedning after card matched for better UX.
-* Without this function user unable to see matched cards or second uncoverd
-* unmatched card before being flipped back.
-*/
-        setTimeout(function () {
-            if (cardsUncovered[0].className === cardsUncovered[1].className 
-                && cardsUncovered[0].id != cardsUncovered[1].id) {
-                cardsMatched++;
-                cardsUncovered.forEach(function (tile) {
-                    tile.classList.add('removed');
-                });
-// Making sure cards are removed from the deck to prevent double clicking
-                disableCards();
-                if (cardsMatched == deck.length / 2) {
-// Displaying winAlert modal after all cards matched
-                    winAlert();
-                    turnCounter = 0;
-                    turnCounterDisplay();
-
-                }
-// Cards unmatched, making sure they are flipped back again and still in game
-            } else {
-                cardsUncovered.forEach(function (tile) {
-                    tile.classList.add('hidden');
-                });
-            }
-            tilesInGrid.forEach(function (tile) {
-                tile.addEventListener('click', flipTile);
-            });
-// Emptying visibleTiles to be able to match cards again in another turn
-            cardsUncovered = [];
-        }, 750);
+        delayCardFlippingBack()
     }
 }
 
@@ -190,7 +177,7 @@ let clickedButton = function(){
         createGrid();
         tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
-        $('h3').html('Turns: ' + turnCounter);
+        turnCounterDisplay();
         startGame();
 /** Medium level picked, assigns only 12 tiles and 12 cards to the deck, shuffles deck and creates
  * grid then starts the game. 
@@ -201,7 +188,7 @@ let clickedButton = function(){
         createGrid();
         tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
-        $('h3').html('Turns: ' + turnCounter);
+        turnCounterDisplay();
         startGame();
 /** Hard level picked, 16 tiles and cards in deck, creating grid and starts 
  * function startGame which assigns timer. */
@@ -211,7 +198,7 @@ let clickedButton = function(){
         createGrid();
         tilesInGrid=[...document.getElementsByClassName('tile')];
         turnCounter = 0;
-        $('h3').html('Turns: ' + turnCounter);
+        turnCounterDisplay();
         startGame();
         
     }
