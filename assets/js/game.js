@@ -83,6 +83,13 @@ function resetGame() {
     location.reload();
 }
 
+/**
+ * Function that will be called when an update to the turnCounter is required
+ */
+function turnCounterDisplay() {
+	$('h3').html('Turns: ' + turnCounter);
+}
+
 // Function that will allow flipping the tiles
 
 function flipTile() {
@@ -107,7 +114,7 @@ function flipTile() {
 */
         } else {
             turnCounter++;
-            $('h3').html('Turns: ' + turnCounter);
+            turnCounterDisplay();
             tilesInGrid.forEach(function (tile) {
                 tile.removeEventListener('click', flipTile);
             });
@@ -129,7 +136,7 @@ function flipTile() {
 // Displaying winAlert modal after all cards matched
                     winAlert();
                     turnCounter = 0;
-                    $('h3').html('Turns: ' + turnCounter);
+                    turnCounterDisplay();
 
                 }
 // Cards unmatched, making sure they are flipped back again and still in game
