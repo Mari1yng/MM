@@ -183,24 +183,21 @@ function startGame(){
     
 }
 
+function playEasyLevel(){
+    deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
+    shuffle(deck);        
+    createGrid();
+    tilesInGrid=[...document.getElementsByClassName('tile')];
+    turnCounter = 0;
+    turnCounterDisplay();
+    startGame();
+}
 // Function that acts when easy, medium and hard difficulty buttons are clicked. 
 
-let clickedButton = function(){
+let pickingDifficulty = function(){
     activeButton = this;
-/** Easy level picked, assigns only 8 tiles and 8 cards to the deck, shuffles deck and creates
- * grid then starts the game. 
- */ 
     if ($(this).hasClass('easybtn')){
-        deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
-        shuffle(deck);        
-        createGrid();
-        tilesInGrid=[...document.getElementsByClassName('tile')];
-        turnCounter = 0;
-        turnCounterDisplay();
-        startGame();
-/** Medium level picked, assigns only 12 tiles and 12 cards to the deck, shuffles deck and creates
- * grid then starts the game. 
- */ 
+       playEasyLevel();
     } else if ($(this).hasClass('mediumbtn')){
         deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
         shuffle(deck);        
@@ -209,8 +206,6 @@ let clickedButton = function(){
         turnCounter = 0;
         turnCounterDisplay();
         startGame();
-/** Hard level picked, 16 tiles and cards in deck, creating grid and starts 
- * function startGame which assigns timer. */
     } else {
         deck = allCards;
         shuffle(deck);       
@@ -226,7 +221,7 @@ let clickedButton = function(){
 //function that listens for which difficulty button is clicked
 let checkButton = function (){
     difficultyButtons.forEach(function(button){
-        button.addEventListener('click', clickedButton);
+        button.addEventListener('click', pickingDifficulty);
     });
 };
 
