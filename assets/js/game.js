@@ -112,6 +112,12 @@ function gameVictoryCheck(){
     }
 }
 
+function listeningForATileClick(){
+    tilesInGrid.forEach(function(tile){
+        tile.addEventListener('click', flipTile);
+    });
+}
+
 function delayCardsFlippingBack(){
     setTimeout(function () {
         if (cardsUncovered[0].className === cardsUncovered[1].className 
@@ -123,9 +129,7 @@ function delayCardsFlippingBack(){
         } else {
             returnCardsBackToDeck();
         }
-        tilesInGrid.forEach(function (tile) {
-            tile.addEventListener('click', flipTile);
-        });
+        listeningForATileClick();
         cardsUncovered = [];
     }, 750);
 }
@@ -171,9 +175,7 @@ function flipTile() {
 function startGame(){
     checkIfTimerNeeded();
     $('.tile').click(playClickSound);
-    tilesInGrid.forEach(function(tile){
-        tile.addEventListener('click', flipTile);
-    });
+    listeningForATileClick();
     
 }
 
