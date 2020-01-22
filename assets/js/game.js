@@ -175,7 +175,7 @@ function flipTileToRevealCard() {
     }
  }
 
-function startGame(){
+function startTileFlipping(){
     checkIfTimerNeeded();
     $('.tile').click(playClickSound);
     listeningForATileClick();
@@ -189,7 +189,7 @@ function playEasyLevel(){
     tilesInGrid=[...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
-    startGame();
+    startTileFlipping();
 }
 
 function playMediumLevel(){
@@ -199,7 +199,7 @@ function playMediumLevel(){
     tilesInGrid=[...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
-    startGame();
+    startTileFlipping();
 }
 
 function playHardLevel(){
@@ -209,7 +209,7 @@ function playHardLevel(){
     tilesInGrid=[...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
-    startGame();
+    startTileFlipping();
 }
 // Function that acts when easy, medium and hard difficulty buttons are clicked. 
 
@@ -225,14 +225,14 @@ let pickingDifficulty = function(){
 };
 
 //function that listens for which difficulty button is clicked
-let checkButton = function (){
+let listeningForADifficultyClick = function (){
     difficultyButtons.forEach(function(button){
         button.addEventListener('click', pickingDifficulty);
     });
 };
 
 //Calling  check button function that starts the game process
-checkButton();  
+listeningForADifficultyClick();  
 
 // Function that loads on page load, displays modal which explains how to play the game.
 function welcomeModal(){
