@@ -241,6 +241,7 @@ function welcomeModal(){
 
 // Function displaying modal when level hard was chosen but card matching was not finished within time.
 function gameOver(){
+    $('#gameOverModal').modal({keyboard: false});
     $('#gameOverModal').modal('show');
     $('#closeGameOver').click(resetGame);
 }
