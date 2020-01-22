@@ -52,7 +52,6 @@ function countDown() {
 
 function createGrid() {
     let newGrid = '';
-// Making sure the grid is created from the available deck - after checkButton () ran
     for (let i = 0; i < deck.length; i++) {
         newGrid += '<div id="GridPositionNo' + (i+1) + '"class="mx-auto tile ' + deck[i] + ' hidden"></div>';
     }
@@ -114,13 +113,13 @@ function gameVictoryCheck(){
 
 function listeningForATileClick(){
     tilesInGrid.forEach(function(tile){
-        tile.addEventListener('click', flipTile);
+        tile.addEventListener('click', flipTileToRevealCard);
     });
 }
 
 function listeningForATileClickOff(){
     tilesInGrid.forEach(function (tile) {
-        tile.removeEventListener('click', flipTile);
+        tile.removeEventListener('click', flipTileToRevealCard);
     });
 }
 
@@ -142,7 +141,7 @@ function delayCardsFlippingBack(){
 
 // Function that will allow flipping the tiles
 
-function flipTile() {
+function flipTileToRevealCard() {
     visibleTile = this;
     this.classList.remove('hidden');
     if (cardsUncovered.length === 0) {
