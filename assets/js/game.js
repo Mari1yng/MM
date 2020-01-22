@@ -202,6 +202,16 @@ function playMediumLevel(){
     turnCounterDisplay();
     startGame();
 }
+
+function playHardLevel(){
+    deck = allCards;
+    shuffle(deck);       
+    createGrid();
+    tilesInGrid=[...document.getElementsByClassName('tile')];
+    turnCounter = 0;
+    turnCounterDisplay();
+    startGame();
+}
 // Function that acts when easy, medium and hard difficulty buttons are clicked. 
 
 let pickingDifficulty = function(){
@@ -211,14 +221,7 @@ let pickingDifficulty = function(){
     } else if ($(this).hasClass('mediumbtn')){
         playMediumLevel();
     } else {
-        deck = allCards;
-        shuffle(deck);       
-        createGrid();
-        tilesInGrid=[...document.getElementsByClassName('tile')];
-        turnCounter = 0;
-        turnCounterDisplay();
-        startGame();
-        
+       playHardLevel();        
     }
 };
 
