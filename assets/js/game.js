@@ -118,6 +118,12 @@ function listeningForATileClick(){
     });
 }
 
+function listeningForATileClickOff(){
+    tilesInGrid.forEach(function (tile) {
+        tile.removeEventListener('click', flipTile);
+    });
+}
+
 function delayCardsFlippingBack(){
     setTimeout(function () {
         if (cardsUncovered[0].className === cardsUncovered[1].className 
@@ -150,9 +156,7 @@ function flipTile() {
         } else {
             turnCounter++;
             turnCounterDisplay();
-            tilesInGrid.forEach(function (tile) {
-                tile.removeEventListener('click', flipTile);
-            });
+            listeningForATileClickOff();
         }
         delayCardsFlippingBack()
     }
