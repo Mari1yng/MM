@@ -192,6 +192,16 @@ function playEasyLevel(){
     turnCounterDisplay();
     startGame();
 }
+
+function playMediumLevel(){
+    deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
+    shuffle(deck);        
+    createGrid();
+    tilesInGrid=[...document.getElementsByClassName('tile')];
+    turnCounter = 0;
+    turnCounterDisplay();
+    startGame();
+}
 // Function that acts when easy, medium and hard difficulty buttons are clicked. 
 
 let pickingDifficulty = function(){
@@ -199,13 +209,7 @@ let pickingDifficulty = function(){
     if ($(this).hasClass('easybtn')){
        playEasyLevel();
     } else if ($(this).hasClass('mediumbtn')){
-        deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
-        shuffle(deck);        
-        createGrid();
-        tilesInGrid=[...document.getElementsByClassName('tile')];
-        turnCounter = 0;
-        turnCounterDisplay();
-        startGame();
+        playMediumLevel();
     } else {
         deck = allCards;
         shuffle(deck);       
