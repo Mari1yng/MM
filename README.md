@@ -1,4 +1,5 @@
-# Awesome  80s memory game 
+![Awesome 80s memory game](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/header.png?raw=true)
+
 Entertaining memory card game. User is required to match 2 cards in order to progress with the game. Score counter allows users to beat own results and finish the game in less turns each time.
 
 # UX
@@ -136,3 +137,4 @@ I have also used following:
 - [DLPNG](https://dlpng.com/) - sourcing remaining pictures
 - [dafont.com](https://www.dafont.com/) - sourcing fonts that are used in the header
 - [Font squirrel](https://www.fontsquirrel.com/) - webfont generator
+- [Multi Device Website Mockup Generator](https://techsini.com/)
