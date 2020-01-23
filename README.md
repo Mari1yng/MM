@@ -43,7 +43,7 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that can be seen on popular TV series Miami Vice where main characters were wearing bright colors. 1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. Another association with 1980s color scheme and known to younger generation is released in early 2000s game Grand Theft Auto (GTA) Vice City that placed it's story in 1986. There is no color scheme more 80s than neon.
 
 #### Fonts
-Font [Neon](https://www.dafont.com/neon.font), font [Beastform](https://www.dafont.com/beastform.font) that created main header as well as font [Audiowide](https://fonts.google.com/specimen/Audiowide) on this page are very reminiscent of 1980s.
+Font [Neon](https://www.dafont.com/neon.font), font [Crackman](https://www.dafont.com/crackman.font) that created main header as well as font [Audiowide](https://fonts.google.com/specimen/Audiowide) on this page are very reminiscent of 1980s.
 
 #### Background
 Background picture was picked to compliment Neon font and neon color scheme. At the same time this picture was intended not to be overwhelming main game areas - difficulty buttons and board area.
@@ -135,3 +135,4 @@ I have also used following:
 - [Jing](https://www.jing.fm/) - sourcing card cover - palm picture
 - [DLPNG](https://dlpng.com/) - sourcing remaining pictures
 - [dafont.com](https://www.dafont.com/) - sourcing fonts that are used in the header
+- [Font squirrel](https://www.fontsquirrel.com/) - webfont generator
