@@ -146,11 +146,6 @@ div#board > div {
     opacity: 0;
 }
 
-/* Footer */
-.fa-question-circle {
-    font-size: 24px;
-}
-
 /* Media */ 
 
 @media (min-width: 344px) {
