@@ -42,6 +42,7 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 
 #### Color scheme
 ![Color palette](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/palette.png?raw=true)
+
 Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that can be seen on popular TV series Miami Vice where main characters were wearing bright colors. 1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. Another association with 1980s color scheme and known to younger generation is released in early 2000s game Grand Theft Auto (GTA) Vice City that placed it's story in 1986. There is no color scheme more 80s than neon.
 
 #### Fonts
