@@ -6,7 +6,6 @@ Entertaining memory card game. User is required to match 2 cards in order to pro
 ## Project purpose
 Main purpose of this project is to provide easy game that entertains. It is designed to be easy enough for children to operate but the theme may also encourage adults to have a go.
 
-
 ### Site user goals - children:
 - easy game to operate
 - easy enough game to win
@@ -32,6 +31,12 @@ Awesome 80s memory card game is not only entertaining but it is also having educ
 - playing game that can introduce my children to characters I knew as a child 
 - playing game that can remind me of the characters I grew up knowing
 
+
+![Screenshot of page](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/screenshot.png?raw=true)
+
+## Wireframes
+Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
+
 ## Design decisions
 
 #### Color scheme
@@ -46,9 +51,6 @@ Background picture was picked to compliment Neon font and neon color scheme. At 
 #### Card images
 These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man). 
 These were complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
-
-#### Wireframes
-Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
 
 # Features
 
@@ -74,12 +76,13 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 - [jQuery](https://jquery.com/) - used in places to simplify DOM manipulation, 
 - [Google Fonts](https://fonts.google.com/) - used to style website font
 
-3. Others:
+3. Tools:
+- [Git](https://git-scm.com/) - for version control,
 - [GitHub](https://github.com/) - code stored and shared remotely, 
 - [Visual Studio Code](https://code.visualstudio.com/) - IDE,  
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process, 
 - [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code up to date
- - [Balsamiq](https://balsamiq.com/) - creating wireframes
+- [Balsamiq](https://balsamiq.com/) - creating wireframes
 
 # Testing
 
