@@ -123,17 +123,21 @@ function listeningForATileClickOff(){
     });
 }
 
+function checkForCardMatch(){
+    if (cardsUncovered[0].className === cardsUncovered[1].className 
+        && cardsUncovered[0].id != cardsUncovered[1].id) {
+        cardsMatched++;
+        removeCardsFromDeck();
+        disableCards();
+        gameVictoryCheck();
+    } else {
+        returnCardsBackToDeck();
+    }
+}
+
 function delayCardsFlippingBack(){
     setTimeout(function () {
-        if (cardsUncovered[0].className === cardsUncovered[1].className 
-            && cardsUncovered[0].id != cardsUncovered[1].id) {
-            cardsMatched++;
-            removeCardsFromDeck();
-            disableCards();
-            gameVictoryCheck();
-        } else {
-            returnCardsBackToDeck();
-        }
+        checkForCardMatch();
         listeningForATileClick();
         cardsUncovered = [];
     }, 750);
