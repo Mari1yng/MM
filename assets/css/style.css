@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Audiowide', cursive;
+    font-family: 'Audiowide', sans-serif, cursive;
     color: #f9c80e;
     background-image: url(../images/background.png);
     min-height: 100vh;
@@ -54,12 +54,12 @@ body {
 /*Header styling */
 h1 {
     text-align: center;
-    font-family: 'neonregular';
+    font-family: 'neonregular', sans-serif;
     color: #f6019d;
 }
 
 #headerp {
-    font-family: 'crackman';
+    font-family: 'crackman', sans-serif;
     letter-spacing: 3px;
     Font-size: 32px;
     font-weight: 600;
