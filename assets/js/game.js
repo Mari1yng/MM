@@ -1,5 +1,5 @@
-// Variables
-
+/** Variables  
+ */ 
 const allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
 const difficultyButtons = [...document.getElementsByClassName('difficulty')];
 const timerDisplay = document.getElementById('timer');
@@ -58,13 +58,13 @@ function createGrid() {
     document.getElementById('board').innerHTML = newGrid;
 }
 
-// Function that will allow for click sound to be played when tile is flipped
+/** Function playing card click sound */
 function playClickSound() {
     $('audio#tilesound')[0].play();
 }
 
 /** Function that will filter all cards by nagation of containing class "removed"
- * this will allow for them to be removed from current "tiles" array. 
+ * this will allow for them to be removed from current "tilesInGrid" array. 
  * This was created to make sure matched cards cannot be clicked again despite
  * being already removed from the card deck.
  */
@@ -76,31 +76,38 @@ function disableCards() {
 
 }
 
-// Function that will reset the game 
+/** Function reseting the game  
+*/
 
 function resetGame() {
     location.reload();
 }
 
-/**
- * Function that will be called when an update to the turnCounter is required
+/** Function that will be called when an update to the turnCounter is required
  */
 function turnCounterDisplay() {
 	$('h3').html('Turns: ' + turnCounter);
 }
 
+/** Function that adds class 'removed' to matched tiles in order to remove them from the deck-game 
+*/
 function removeCardsFromDeck(){
     cardsUncovered.forEach(function (tile) {
         tile.classList.add('removed');
     });
 }
 
+/** Function that will add class 'hidden' to the tile after unsucessful match
+  in order to return this card back to the game.
+ */
 function returnCardsBackToDeck(){
     cardsUncovered.forEach(function (tile) {
         tile.classList.add('hidden');
     });
 }
 
+/** Function that checks for a game victory - whether all cards were matched
+ */
 function gameVictoryCheck(){
     if (cardsMatched == deck.length / 2) {
         winAlert();
@@ -111,18 +118,24 @@ function gameVictoryCheck(){
     }
 }
 
+/** Function that returns possibility of tile clicking/flipping
+ */
 function listeningForATileClick(){
     tilesInGrid.forEach(function(tile){
-        tile.addEventListener('click', flipTileToRevealCard);
+        tile.addEventListener('click', cardRevealed);
     });
 }
 
+/** Removing possibility of tile clicking/flipping
+ */
 function listeningForATileClickOff(){
     tilesInGrid.forEach(function (tile) {
-        tile.removeEventListener('click', flipTileToRevealCard);
+        tile.removeEventListener('click', cardRevealed)
     });
 }
 
+/** Function that checks for a card match - pair match
+ */
 function checkForCardMatch(){
     if (cardsUncovered[0].className === cardsUncovered[1].className 
         && cardsUncovered[0].id != cardsUncovered[1].id) {
@@ -135,6 +148,9 @@ function checkForCardMatch(){
     }
 }
 
+/** Function delaying cards to be flipped back in order to allow game user to
+   see what card has been uncovered but not matched or what pair has been removed from the game
+*/
 function delayCardsFlippingBack(){
     setTimeout(function () {
         checkForCardMatch();
@@ -143,9 +159,10 @@ function delayCardsFlippingBack(){
     }, 750);
 }
 
-// Function that will allow flipping the tiles
+/** Function that will reveal cards after tile was flipped 
+*/
 
-function flipTileToRevealCard() {
+function cardRevealed() {
     visibleTile = this;
     this.classList.remove('hidden');
     if (cardsUncovered.length === 0) {
@@ -165,8 +182,7 @@ function flipTileToRevealCard() {
     }
 }
 
-/** Function that starts the game and checks which difficulty level has been
- * picked in order to assign countDown function and display timer or leave the timer out.
+/** Function that starts timer for hard level
  */
 
  function checkIfTimerNeeded(){
@@ -179,12 +195,17 @@ function flipTileToRevealCard() {
     }
  }
 
+ /** Fuction that let's tile flipping and playing game
+  */
+
 function startTileFlipping(){
     checkIfTimerNeeded();
     $('.tile').click(playClickSound);
-    listeningForATileClick();
-    
+    listeningForATileClick();    
 }
+
+/** Function setting easy level play
+ */
 
 function playEasyLevel(){
     deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
@@ -196,6 +217,8 @@ function playEasyLevel(){
     startTileFlipping();
 }
 
+/** Function setting medium level play
+ */
 function playMediumLevel(){
     deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
     shuffle(deck);        
@@ -206,6 +229,8 @@ function playMediumLevel(){
     startTileFlipping();
 }
 
+/** Function setting hard level play
+ */
 function playHardLevel(){
     deck = allCards;
     shuffle(deck);       
@@ -215,7 +240,9 @@ function playHardLevel(){
     turnCounterDisplay();
     startTileFlipping();
 }
-// Function that acts when easy, medium and hard difficulty buttons are clicked. 
+
+/** Function that allows picking desired difficulty of a game
+ */ 
 
 let pickingDifficulty = function(){
     activeButton = this;
@@ -228,35 +255,34 @@ let pickingDifficulty = function(){
     }
 };
 
-//function that listens for which difficulty button is clicked
-let listeningForADifficultyClick = function (){
+/** Function that makes difficulty button clickable
+ */
+let enablingDifficultyClick = function (){
     difficultyButtons.forEach(function(button){
         button.addEventListener('click', pickingDifficulty);
     });
 };
 
-//Calling  check button function that starts the game process
-listeningForADifficultyClick();  
+/** Calling for a function that starts game process by allowing the user to pick 
+ * difficulty and then proceed with a game
+ * */
 
-// Function that loads on page load, displays modal which explains how to play the game.
+enablingDifficultyClick();  
+
+/** Setting modals - welcome (on page load, on game reset etc.), game over (after time
+ * has run out in level hard) and winning one (all cards matched, game won) 
+ */
 function welcomeModal(){
     $('#welcomeModal').modal('show');
 }
 
-// Function displaying modal when level hard was chosen but card matching was not finished within time.
 function gameOver(){
     $('#gameOverModal').modal({keyboard: false});
     $('#gameOverModal').modal('show');
     $('#closeGameOver').click(resetGame);
 }
 
-//Funcion that displays modal with infomration about all cards matched.
 function winAlert(){
     $('#winModal').modal('show');
     $('.winModalBtn').click(resetGame);
 }
-
-//Function that allows to open winModal again - after question mark in the footer clicked
-$('.fa-question-circle').click(function(){
-    welcomeModal();
-});
