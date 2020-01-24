@@ -60,12 +60,16 @@ These were complimented with 2 from the list of the most popular comic book char
 ### Existing features
 1. Welcome modal - explaining how to play the game.
 2. Difficulty buttons allowing player to change how many cards they want to play - 8, 12 or 16.
-3. Turns counter - lets player know how many turns has it taken so far in this game.
+3. Turns counter - lets player know how many turns it has taken so far in this game.
 4. Board that displays cards in 4 columns and number of rows on computers, tablets and most phone devices.
 5. Timer - that allows user only 60 seconds to finish level hard. 
-6. Win modal that congratulates user winning of the game - matching all cards.
+6. Game over modal - stopping and resetting the game after time has run out on level hard.
+7. Win modal that congratulates user winning of the game - matching all cards.
 
-### Features left to implement
+### Features left to implement in the future:
+1. Best results site
+2. Possibility to add username to the scoreboard
+3. Different set of cards to be chosen ie. comic characters, game characters etc.
 
 # Technologies
 1. Languages : 
