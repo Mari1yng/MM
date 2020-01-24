@@ -130,15 +130,14 @@ function listeningForATileClick(){
  */
 function listeningForATileClickOff(){
     tilesInGrid.forEach(function (tile) {
-        tile.removeEventListener('click', cardRevealed)
+        tile.removeEventListener('click', cardRevealed);
     });
 }
 
 /** Function that checks for a card match - pair match
  */
 function checkForCardMatch(){
-    if (cardsUncovered[0].className === cardsUncovered[1].className 
-        && cardsUncovered[0].id != cardsUncovered[1].id) {
+    if (cardsUncovered[0].className === cardsUncovered[1].className && cardsUncovered[0].id != cardsUncovered[1].id) {
         cardsMatched++;
         removeCardsFromDeck();
         disableCards();
@@ -178,7 +177,7 @@ function cardRevealed() {
             turnCounterDisplay();
             listeningForATileClickOff();
         }
-        delayCardsFlippingBack()
+        delayCardsFlippingBack();
     }
 }
 
@@ -275,6 +274,12 @@ enablingDifficultyClick();
 function welcomeModal(){
     $('#welcomeModal').modal('show');
 }
+
+function loadPage(){
+    window.onload = welcomeModal();
+}
+
+loadPage();
 
 function gameOver(){
     $('#gameOverModal').modal({keyboard: false});
