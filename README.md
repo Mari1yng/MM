@@ -98,13 +98,13 @@ Testing details can be found in separate testing.md [file](https://github.com/ma
 # Deployment
 
 Deploying this page from GitHub repository to GitHub Pages was achieved by following these steps:
-1. Logging into GitHub
-2. Picking malc-u/memoryCardGame repository for the list of repositories
-3. Selecting Settings - from menu items on the top of the page (top, right hand corner)
-4. Scrolling down to the GitHub Pages section
-5. Picking Master Branch from the "Source" drop-down menu in Github Pages (changing from the default "none" to master branch)
+1. Logging into **GitHub**
+2. Picking **malc-u/memoryCardGame** repository for the list of repositories
+3. Selecting **Settings** - from menu items on the top of the page (top, right hand corner)
+4. Scrolling down to the **GitHub Pages** section
+5. Picking **Master Branch** from the "**Source**" drop-down menu in Github Pages (changing from the default "none" to master branch)
 6. Awaiting for the page to be refreshed and website to be deployed - this happens automatically when step 5 is actioned
-7. Scrolling back down to the GitHub Pages section to check/retrieve the link of newly deployed website
+7. Scrolling back down to the **GitHub Pages** section to check/retrieve the link of newly deployed website
 
 ### How to run this project locally
 
