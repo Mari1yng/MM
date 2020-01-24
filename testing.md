@@ -32,7 +32,7 @@ Page buttons were tested for correct operation and whether they operated and ope
 6. Clicking close in welcome modal closes it allowing for the difficulty level to be picked 
 
 ##### Interaction bugs/problems:
-- Game over modal - clicking keyboard or modal backdrop was allowing for a game to be carried even though time has run out and modal was still displayed. This was fixed by switching backdrop off in this modal as well as initializing modal without keyboard.
+- **Game over modal** - clicking keyboard or modal backdrop was allowing for a game to be carried even though time has run out and modal was still displayed. This was fixed by switching backdrop off in this modal as well as initializing modal without keyboard.
 
 #### Tested game logic using using Chrome, Firefox and Opera(on mobile):
 This test was done to make sure JavaScript runs correctly (as desired) on these browsers.
@@ -44,9 +44,9 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain not shuffled
 7. Changing level mid way playing the game hoping for the turn counter to remain unchanged
 
-##### Game logic problems:
-- Double clicking of the card was assigned as a card match - fixed
-- Game switched mid way was not resetting turn counter - fixed
+##### Game logic bugs/problems:
+- Double clicking of the card was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID
+- Game switched mid way was not resetting turn counter - fixed by adding timeLeft = 0 every time after new grid is created
 
 ### Automated testing
 
@@ -54,8 +54,6 @@ Following online validators were used to test the code:
 - [W3C Markaup Validation Service](https://validator.w3.org/) for HTML validation
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS validation
 - [JS Hint](https://jshint.com/) for JavaScript validation
-
-#### Testing summary
 
 ##### HTML validation:
 It brought up no errors and 1 warning about empty header h2 - this tag is used by JavaScript to display timer. Left unfixed.
