@@ -2,7 +2,7 @@
 
 ### Manual testing
 
-#### Tested responsiveness in Chrome:
+#### Responsiveness was tested in Chrome Developer Tools:
 Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer.
 
 Tested the pages on all sizes/devices available in Chrome.
@@ -15,6 +15,12 @@ Tested the pages on all sizes/devices available in Chrome.
 - 600 x 1024 Blackberry PlayBook
 - 768 x 1024 iPad
 - 1024 x 1366 iPad Pro
+
+##### Responsiveness bugs/problems:
+- **Difficulty buttons were moving from inline to block early**, when the board was still underneath them not to the right. This was very bad UX - changed media in css
+- **Cards were floating left**, especially visible on smaller devices - added Bootstrap's mx auto class to each tile created via JavaScript
+- **More than 4 tiles in 1 row** on some devices - amended media in css to allow for tile size adjustment in order to keep only 4 tiles in 1 row for all devices tested
+- Part of **header and turn counter were blending** on mobile devices - changed media to amend colour of header for mobile devices in css 
 
 #### Tested interaction in Chrome, Firefox and Opera(mobile):
 Page buttons were tested for correct operation and whether they operated and opened intended parts of page(difficulty levels etc.)
@@ -38,8 +44,7 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 
 #### Testing summary:
 
-##### Responsiveness problems:
-- Difficulty buttons were moving from inline to block early, when the board was still underneath them not to the right. This was very bad UX - changed media in css
+
 
 ##### Interaction problems:
 - no problems recorded
