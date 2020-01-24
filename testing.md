@@ -48,6 +48,29 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 - Double clicking of the card was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID
 - Game switched mid way was not resetting turn counter - fixed by adding timeLeft = 0 every time after new grid is created
 
+### User stories testing
+
+1. Playing game to kill spare time (eg. during travel etc.):
+    - this game is perfect to do in spare time, it is easy to operate, engaging and not too complicated.
+
+2. Game that is easy enough for my children to operate
+    - game that requires matching 2 cards only is not too complicated even for very yung children, 
+    - game is easy to operate - just couple of clicks gets children engaged and challenged,
+    - game allows user easy level that requires matching only 4 pairs,
+    - for older children there is also added difficulty of time limit on leve hard - easy but challenging.
+
+3. Playing the game that is visually appealing
+    - game is very colorful and nice looking,
+    - game presents user with characters that attract attention,
+    - fonts and colors used evoke emotion.
+    
+4. Playing game that can introduce my children to characters I knew as a child:
+    - game presets users with very popular game and comic book characters from 80s: Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles)
+
+5. Playing game that can spark conversation between me and my children/me and my parents:
+    - introducing characters that were very popular in 80s and beginning of 90s will allow children to ask questions about them
+    - characters used in the cards can also allow parents to present children with original games and comics that the characters come from
+
 ### Automated testing
 
 Following online validators were used to test the code:
@@ -62,4 +85,4 @@ It brought up no errors and 1 warning about empty header h2 - this tag is used b
 No errors found.
 
 ##### JavaScript validation:
-Few semicolons missing - fixed.
+Few semicolons misplaced - fixed.
