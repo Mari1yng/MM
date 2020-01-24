@@ -129,7 +129,7 @@ Further reading or help with cloning can be found on this GitHub Help [page](htt
 # Credits
 
 The content of this page was written by me however following people & their work have influenced me and this project:
-- [Bartek Borowczyk](https://www.udemy.com/user/samuraj-programowania/) - mechanics of assigning, swapping classes for card matching and in general JavaScript tutorials
+- [Bartek Borowczyk](https://www.udemy.com/user/samuraj-programowania/) - mechanics of assigning, swapping classes for card matching and in general JavaScript
 - [Mike Bostock](https://bost.ocks.org/mike/) - mechanics of shuffling an array and Fisher–Yates Shuffle
 - [Eric Schwartz](https://medium.com/@ericschwartz7) - mechanics of adding sounds to the page
 - [Simen Daehlin](https://github.com/Eventyret) Code Institute mentor - overall aspect of the project
