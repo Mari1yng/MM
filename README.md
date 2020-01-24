@@ -30,7 +30,7 @@ Awesome 80s memory card game is not only entertaining but it is also having educ
 - game that is easy enough for my children to operate
 - playing the game that is visually appealing 
 - playing game that can introduce my children to characters I knew as a child 
-- playing game that can remind me of the characters I grew up knowing
+- playing game that can spark conversation between parents and children
 
 
 ![Screenshot of page](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/screenshot.png?raw=true)
