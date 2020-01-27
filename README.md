@@ -134,8 +134,8 @@ The content of this page was written by me however following people & their work
 - [Eric Schwartz](https://medium.com/@ericschwartz7) - mechanics of adding sounds to the page
 - [Simen Daehlin](https://github.com/Eventyret) Code Institute mentor - overall aspect of the project
 
-I have also used following:
-- [Reddit](https://www.reddit.com/r/wallpaper/comments/acqekd/neon_gas_1920x1080/) - for sourcing background picture and [colors](https://www.reddit.com/user/-Space-Cadet-/)
+I have also used following for reacherching:
+- Reddit - for sourcing [background picture](https://www.reddit.com/r/wallpaper/comments/acqekd/neon_gas_1920x1080/) and [colors](https://www.reddit.com/user/-Space-Cadet-/)
 - [Freesound](https://freesound.org/) - for sourcing click sound
 - [Nintendo](http://mario.nintendo.com/)- sourcing pictures of Mario and Luigi
 - [Pin Clipart](https://www.pinclipart.com/) - sourcing Bomb Jack picture
@@ -144,3 +144,7 @@ I have also used following:
 - [dafont.com](https://www.dafont.com/) - sourcing fonts that are used in the header
 - [Font squirrel](https://www.fontsquirrel.com/) - webfont generator
 - [Multi Device Website Mockup Generator](https://techsini.com/)
+- [Code Pen](https://codepen.io/)
+- [Stack overflow](https://stackoverflow.com/)
+- [W3Schools](https://www.w3schools.com/)
+- [Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
