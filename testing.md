@@ -51,10 +51,13 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 5. Picking the same level and uncovering the same card in a grid hoping card deck stays not shuffled
 6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain not shuffled
 7. Changing level mid way playing the game hoping for the turn counter to remain unchanged
+8. Clicked hard level few times to check whether the timer resets
 
 ##### Game logic bugs/problems:
 - Double clicking of the card was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID
 - Game switched mid way was not resetting turn counter - fixed by adding timeLeft = 0 every time after new grid is created
+- Double or more clicks on level hard cause the timer to count down fast (quicker than every second) - left unfixed
+- Changing difficulty level after the fast count down started resets the grid but leaves the timer to count down to zero and bring up game over modal - left unfixed
 
 ### User stories testing
 
