@@ -24,9 +24,17 @@ Tested the pages on all sizes/devices available in Chrome.
 
 #### Tested interaction in Chrome, Firefox and Opera(on mobile):
 Page buttons were tested for correct operation and whether they operated and opened intended parts of page(difficulty levels etc.)
-1. Easy button - opened easy level assigning 8 tiles to the grid
-2. Medium button - opened medium level assigning 12 tiled to the grid
-3. Hard button - opened hard level assigning 16 tiles to the grid, opening timer
+1. Easy button:
+    - seleceted easy level and confirmed assigning 8 tiles to the grid
+    - played the game finding 3 out of 4 matches and re-clicked easy button to make sure new grid is created and game is reset
+    - confrimed that each time easy button is clicked all cards are being re-shufled
+    - completed the game in easy mode and confirmed that win modal is displayed
+    - clicked another diffuculty and confirmed that easy grid is being replaced with another difficulty grid
+2. Medium button:
+    - repeated all steps from easy button level and confirmed that correct grid is assigned/displayed, cards are re-shuffled and game reset when clicked
+3. Hard button:
+    - repeated all steps from easy and medium buttons to confirm correct grid is assigned/displayed, cards are re-shuffled and game reset.
+    - selected hard level and confirmed the timer is reset to count down,
 4. Clicking close in win modal reloads the game
 5. Clicking close in game over modal reloads the game
 6. Clicking close in welcome modal closes it allowing for the difficulty level to be picked 
