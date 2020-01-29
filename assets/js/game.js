@@ -187,6 +187,7 @@ function cardRevealed() {
  function checkIfTimerNeeded(){
     if (deck.length === 16){
         timeLeft = 60;
+        clearInterval(timer);
         timer = setInterval(countDown, 1000);
     } else { 
         clearInterval(timer);
