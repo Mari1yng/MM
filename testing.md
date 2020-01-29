@@ -72,8 +72,8 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 
 - **Double clicking** of the **card** was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID.
 - **Difficulty level changed mid game** was not resetting turn counter - fixed by adding timeLeft = 0 every time after new grid is created.
-- **Double** or more **click**s on level **hard** cause the timer to count down fast (quicker than every second) - left unfixed.
-- **Changing difficulty** level **after** the **fast count down started** resets the grid but leaves the timer to count down to zero and bring up game over modal - left unfixed.
+- **Double** or more **click**s on level **hard** cause the timer to count down fast (quicker than every second) - fixed by adding clearInterval before setInterval in function that checks which difficulty level is picked to make sure double clicking will not trigger few intervals to be set 
+- **Changing difficulty** level **after** the **fast count down started** resets the grid but leaves the timer to count down to zero and bring up game over modal - fixed by adding clearInterval before setInterval in function that checks which difficulty level is picked to make sure double clicking will not trigger few intervals to be set 
 
 
 ### User stories testing
