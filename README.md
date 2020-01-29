@@ -43,7 +43,10 @@ Initial wireframes for this project can be seen in the [Wireframes folder](https
 #### Color scheme
 ![Color palette](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/palette.png?raw=true)
 
-Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that can be seen on popular TV series Miami Vice where main characters were wearing bright colors. 1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. Another association with 1980s color scheme and known to younger generation is released in early 2000s game Grand Theft Auto (GTA) Vice City that placed it's story in 1986. There is no color scheme more 80s than neon.
+Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that could be seen on popular then TV series - Miami Vice - where main characters were wearing bright colors. 
+1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. 
+Another association with 1980s color scheme and known to younger generation is released in early 2000s game [Grand Theft Auto (GTA) Vice City](https://www.rockstargames.com/vicecity/) that placed it's story in 1986. 
+There is no color scheme more 80s than neon.
 
 #### Fonts
 Font [Neon](https://www.dafont.com/neon.font), font [Crackman](https://www.dafont.com/crackman.font) that created main header as well as font [Audiowide](https://fonts.google.com/specimen/Audiowide) on this page are very reminiscent of 1980s.
@@ -54,6 +57,7 @@ Background picture was picked to compliment Neon font and neon color scheme. At 
 #### Card images
 These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man). 
 These were complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
+
 
 # Features
 
@@ -67,8 +71,8 @@ These were complimented with 2 from the list of the most popular comic book char
 7. Win modal that congratulates user winning of the game - matching all cards.
 
 ### Features left to implement in the future:
-1. Best results site
-2. Possibility to add username to the scoreboard
+1. Best results /scoreboard.
+2. Adding possibility of logging username  and then using it in the scoreboard
 3. Different set of cards to be chosen ie. comic characters, game characters etc.
 
 # Technologies
@@ -110,19 +114,19 @@ Deploying this page from GitHub repository to GitHub Pages was achieved by follo
 
 To clone this project from this repository following steps need to be taken:
 
-1. Scroll up to the repository section on this page
-2. Click "Clone or download"(green button on the right hand side, just above the file list) - this will open "Clone with HTTPS" section
-3. Copy the clone URL for the repository from "Clone with HTTPS" section
-4. Open your local IDE
-5. Open your favourite terminal (e.g. in your local IDE)
-6. Change the current working directory to the location where you want the cloned directory to be
-7. Type git clone, and then paste the URL you copied in Step 3 - in this project the comant should be:
+1. **Scroll up** to the repository section on this page
+2. **Click "Clone or download"**(green button on the right hand side, just above the file list) - this will open "Clone with HTTPS" section
+3. **Copy** the clone **URL** for the repository from "Clone with HTTPS" section
+4. **Open** your local **IDE**
+5. **Open** your favourite **terminal** (e.g. in your local IDE)
+6. **Change** the current **working directory** to the location where you want the cloned directory to be
+7. Type **git clone**, and then paste **the URL** you copied in Step 3 - in this project the comant should be:
 
 ```
 	git clone https://github.com/malc-u/memoryCardGame.git
 ```
 
-8. Press Enter to create your local clone 
+8. Press **Enter** to create your local clone 
 
 Further reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
