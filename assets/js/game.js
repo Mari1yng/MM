@@ -120,7 +120,7 @@ function gameVictoryCheck(){
 
 /** Function that returns possibility of tile clicking/flipping
  */
-function listeningForATileClick(){
+function enableTileClick(){
     tilesInGrid.forEach(function(tile){
         tile.addEventListener('click', cardRevealed);
     });
@@ -128,7 +128,7 @@ function listeningForATileClick(){
 
 /** Removing possibility of tile clicking/flipping
  */
-function listeningForATileClickOff(){
+function disableTileClick(){
     tilesInGrid.forEach(function (tile) {
         tile.removeEventListener('click', cardRevealed);
     });
@@ -153,7 +153,7 @@ function checkForCardMatch(){
 function delayCardsFlippingBack(){
     setTimeout(function () {
         checkForCardMatch();
-        listeningForATileClick();
+        enableTileClick();
         cardsUncovered = [];
     }, 750);
 }
@@ -175,7 +175,7 @@ function cardRevealed() {
         } else {
             turnCounter++;
             turnCounterDisplay();
-            listeningForATileClickOff();
+            disableTileClick();
         }
         delayCardsFlippingBack();
     }
@@ -201,7 +201,7 @@ function cardRevealed() {
 function startTileFlipping(){
     startTimerIfNeeded();
     $('.tile').click(playClickSound);
-    listeningForATileClick();    
+    enableTileClick();    
 }
 
 /** Function setting easy level play
