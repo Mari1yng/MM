@@ -184,7 +184,7 @@ function cardRevealed() {
 /** Function that starts timer for hard level
  */
 
- function checkIfTimerNeeded(){
+ function startTimerIfNeeded(){
     if (deck.length === 16){
         timeLeft = 60;
         clearInterval(timer);
@@ -199,7 +199,7 @@ function cardRevealed() {
   */
 
 function startTileFlipping(){
-    checkIfTimerNeeded();
+    startTimerIfNeeded();
     $('.tile').click(playClickSound);
     listeningForATileClick();    
 }
