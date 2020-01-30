@@ -1,5 +1,5 @@
 /** Variables  
- */ 
+ */
 const allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
 const difficultyButtons = [...document.getElementsByClassName('difficulty')];
 const timerDisplay = document.getElementById('timer');
@@ -53,7 +53,7 @@ function countDown() {
 function createGrid() {
     let newGrid = '';
     for (let i = 0; i < deck.length; i++) {
-        newGrid += '<div id="GridPositionNo' + (i+1) + '"class="mx-auto tile ' + deck[i] + ' hidden"></div>';
+        newGrid += '<div id="GridPositionNo' + (i + 1) + '"class="mx-auto tile ' + deck[i] + ' hidden"></div>';
     }
     document.getElementById('board').innerHTML = newGrid;
 }
@@ -72,12 +72,12 @@ function playClickSound() {
 function disableCards() {
     tilesInGrid = tilesInGrid.filter(function (tile) {
         return !tile.classList.contains('removed');
-    }); 
+    });
 
 }
 
 /** Function reseting the game  
-*/
+ */
 
 function resetGame() {
     location.reload();
@@ -86,12 +86,12 @@ function resetGame() {
 /** Function that will be called when an update to the turnCounter is required
  */
 function turnCounterDisplay() {
-	$('h3').html('Turns: ' + turnCounter);
+    $('h3').html('Turns: ' + turnCounter);
 }
 
 /** Function that adds class 'removed' to matched tiles in order to remove them from the deck-game 
-*/
-function removeCardsFromDeck(){
+ */
+function removeCardsFromDeck() {
     cardsUncovered.forEach(function (tile) {
         tile.classList.add('removed');
     });
@@ -100,7 +100,7 @@ function removeCardsFromDeck(){
 /** Function that will add class 'hidden' to the tile after unsucessful match
   in order to return this card back to the game.
  */
-function returnCardsBackToDeck(){
+function returnCardsBackToDeck() {
     cardsUncovered.forEach(function (tile) {
         tile.classList.add('hidden');
     });
@@ -108,7 +108,7 @@ function returnCardsBackToDeck(){
 
 /** Function that checks for a game victory - whether all cards were matched
  */
-function gameVictoryCheck(){
+function gameVictoryCheck() {
     if (cardsMatched == deck.length / 2) {
         winAlert();
         turnCounter = 0;
@@ -120,15 +120,15 @@ function gameVictoryCheck(){
 
 /** Function that returns possibility of tile clicking/flipping
  */
-function enableTileClick(){
-    tilesInGrid.forEach(function(tile){
+function enableTileClick() {
+    tilesInGrid.forEach(function (tile) {
         tile.addEventListener('click', cardRevealed);
     });
 }
 
 /** Removing possibility of tile clicking/flipping
  */
-function disableTileClick(){
+function disableTileClick() {
     tilesInGrid.forEach(function (tile) {
         tile.removeEventListener('click', cardRevealed);
     });
@@ -136,7 +136,7 @@ function disableTileClick(){
 
 /** Function that checks for a card match - pair match
  */
-function checkForCardMatch(){
+function checkForCardMatch() {
     if (cardsUncovered[0].className === cardsUncovered[1].className && cardsUncovered[0].id != cardsUncovered[1].id) {
         cardsMatched++;
         removeCardsFromDeck();
@@ -150,7 +150,7 @@ function checkForCardMatch(){
 /** Function delaying cards to be flipped back in order to allow game user to
    see what card has been uncovered but not matched or what pair has been removed from the game
 */
-function delayCardsFlippingBack(){
+function delayCardsFlippingBack() {
     setTimeout(function () {
         checkForCardMatch();
         enableTileClick();
@@ -159,7 +159,7 @@ function delayCardsFlippingBack(){
 }
 
 /** Function that will reveal cards after tile was flipped 
-*/
+ */
 
 function cardRevealed() {
     visibleTile = this;
@@ -184,34 +184,34 @@ function cardRevealed() {
 /** Function that starts timer for hard level
  */
 
- function startTimerIfNeeded(){
-    if (deck.length === 16){
+function startTimerIfNeeded() {
+    if (deck.length === 16) {
         timeLeft = 60;
         clearInterval(timer);
         timer = setInterval(countDown, 1000);
-    } else { 
+    } else {
         clearInterval(timer);
-        timerDisplay.innerHTML = ''; 
+        timerDisplay.innerHTML = '';
     }
- }
+}
 
- /** Fuction that let's tile flipping and playing game
-  */
+/** Fuction that let's tile flipping and playing game
+ */
 
-function startTileFlipping(){
+function startTileFlipping() {
     startTimerIfNeeded();
     $('.tile').click(playClickSound);
-    enableTileClick();    
+    enableTileClick();
 }
 
 /** Function setting easy level play
  */
 
-function playEasyLevel(){
-    deck = ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
-    shuffle(deck);        
+function playEasyLevel() {
+    deck = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
+    shuffle(deck);
     createGrid();
-    tilesInGrid=[...document.getElementsByClassName('tile')];
+    tilesInGrid = [...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
     startTileFlipping();
@@ -219,11 +219,11 @@ function playEasyLevel(){
 
 /** Function setting medium level play
  */
-function playMediumLevel(){
-    deck =  ['mario', 'mario','luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
-    shuffle(deck);        
+function playMediumLevel() {
+    deck = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
+    shuffle(deck);
     createGrid();
-    tilesInGrid=[...document.getElementsByClassName('tile')];
+    tilesInGrid = [...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
     startTileFlipping();
@@ -231,34 +231,34 @@ function playMediumLevel(){
 
 /** Function setting hard level play
  */
-function playHardLevel(){
+function playHardLevel() {
     deck = allCards;
-    shuffle(deck);       
+    shuffle(deck);
     createGrid();
-    tilesInGrid=[...document.getElementsByClassName('tile')];
+    tilesInGrid = [...document.getElementsByClassName('tile')];
     turnCounter = 0;
     turnCounterDisplay();
     startTileFlipping();
 }
 
 /** Function that allows picking desired difficulty of a game
- */ 
+ */
 
-let pickingDifficulty = function(){
+let pickingDifficulty = function () {
     activeButton = this;
-    if ($(this).hasClass('easybtn')){
-       playEasyLevel();
-    } else if ($(this).hasClass('mediumbtn')){
+    if ($(this).hasClass('easybtn')) {
+        playEasyLevel();
+    } else if ($(this).hasClass('mediumbtn')) {
         playMediumLevel();
     } else {
-       playHardLevel();        
+        playHardLevel();
     }
 };
 
 /** Function that makes difficulty button clickable
  */
-let enablingDifficultyClick = function (){
-    difficultyButtons.forEach(function(button){
+let enablingDifficultyClick = function () {
+    difficultyButtons.forEach(function (button) {
         button.addEventListener('click', pickingDifficulty);
     });
 };
@@ -267,28 +267,30 @@ let enablingDifficultyClick = function (){
  * difficulty and then proceed with a game
  * */
 
-enablingDifficultyClick();  
+enablingDifficultyClick();
 
 /** Setting modals - welcome (on page load, on game reset etc.), game over (after time
  * has run out in level hard) and winning one (all cards matched, game won) 
  */
-function welcomeModal(){
+function welcomeModal() {
     $('#welcomeModal').modal('show');
 }
 
-function loadPage(){
+function loadPage() {
     window.onload = welcomeModal();
 }
 
 loadPage();
 
-function gameOver(){
-    $('#gameOverModal').modal({keyboard: false});
+function gameOver() {
+    $('#gameOverModal').modal({
+        keyboard: false
+    });
     $('#gameOverModal').modal('show');
     $('#closeGameOver').click(resetGame);
 }
 
-function winAlert(){
+function winAlert() {
     $('#winModal').modal('show');
     $('.winModalBtn').click(resetGame);
 }
