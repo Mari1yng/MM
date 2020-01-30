@@ -1,13 +1,15 @@
+# Memory game for 80s kids and card matching game for their kids - all in one
+
 ![Awesome 80s memory game](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/header.png?raw=true)
 
-Entertaining memory card game. User is required to match 2 cards in order to progress with the game. Score counter allows users to beat own results and finish the game in less turns each time.
+## UX
 
-# UX
+### Project purpose
 
-## Project purpose
 Main purpose of this project is to provide easy game that entertains. It is designed to be easy enough for children to operate but the theme may also encourage adults to have a go.
 
-### Site user goals - children:
+#### Site user goals - children
+
 - easy game to operate
 - easy enough game to win
 - game that is fun
@@ -16,7 +18,8 @@ Main purpose of this project is to provide easy game that entertains. It is desi
 
 Awesome 80s memory card game meets all the needs above because it provides intuitive navigation. Easy and medium levels are great for even very young children to solve. They may not do this in smallest number of turns possible but they still can get sense of achievement by solving the puzzle. Game that provides this is always fun to play. This game is also colorful and presents children with characters they may have not necessarily known yet.
 
-### Site user goals - adults(parents and guardians)
+#### Site user goals - adults(parents and guardians)
+
 - game that will help my children develop
 - easy to use for children
 - game that will challenge my child but not discourage them at the same time
@@ -25,83 +28,94 @@ Awesome 80s memory card game meets all the needs above because it provides intui
 
 Awesome 80s memory card game is not only entertaining but it is also having educational qualities. Game is training player's memory and exercising player's brain. Game is easy to use and challenging for users at any level. Some young children can get discouraged very easily and throw tantrums thus creating problem for parents. Luckily this game is easy enough for children to finish (match all cards) but the number of turns adds another layer to the challenge. The game presents users with characters that may bring smile and trip down memory lane. It can be a good conversation starter that can add irreplaceable intergenerational connection and extra value to using this game. This may also encourage some parents to play this game themselves.
 
-### User stories
+#### User stories
+
 - playing game to kill spare time (eg. during travel etc.)
 - game that is easy enough for my children to operate
-- playing the game that is visually appealing 
-- playing game that can introduce my children to characters I knew as a child 
+- playing the game that is visually appealing
+- playing game that can introduce my children to characters I knew as a child
 - playing game that can spark conversation between parents and children
-
 
 ![Screenshot of page](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/screenshot.png?raw=true)
 
-## Wireframes
+### Wireframes
+
 Initial wireframes for this project can be seen in the [Wireframes folder](https://github.com/malc-u/memoryCardGame/tree/master/wireframes).
 
-## Design decisions
+### Design decisions
 
 #### Color scheme
+
 ![Color palette](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/palette.png?raw=true)
 
-Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that could be seen on popular then TV series - [Miami Vice](https://www.imdb.com/title/tt0086759/) - where main characters were wearing bright colors. 
-1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors. 
-Another association with 1980s color scheme and known to younger generation is released in early 2000s game [Grand Theft Auto (GTA) Vice City](https://www.rockstargames.com/vicecity/) that placed it's story in 1986. 
+Colors that were picked had to match the theme of this game. 1980s were well known for colorful clothing that could be seen on popular then TV series - [Miami Vice](https://www.imdb.com/title/tt0086759/) - where main characters were wearing bright colors.
+1980s colors are known as colors of highlighter pens - bright yellow, orange, pink, blue, green etc, so called neon colors.
+Another association with 1980s color scheme and known to younger generation is released in early 2000s game [Grand Theft Auto (GTA) Vice City](https://www.rockstargames.com/vicecity/) that placed it's story in 1986.
 There is no color scheme more 80s than neon.
 
 #### Fonts
+
 Font [Neon](https://www.dafont.com/neon.font), font [Crackman](https://www.dafont.com/crackman.font) that created main header as well as font [Audiowide](https://fonts.google.com/specimen/Audiowide) on this page are very reminiscent of 1980s.
 
 #### Background
+
 Background picture was picked to compliment Neon font and neon color scheme. At the same time this picture was intended not to be overwhelming main game areas - difficulty buttons and board area.
 
 #### Card images
-These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man). 
+
+These were specifically chosen to present characters from 80s games such as Nintendo's-  Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man).
 These were complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
 
-
-# Features
+## Features
 
 ### Existing features
+
 1. Welcome modal - explaining how to play the game.
 2. Difficulty buttons allowing player to change how many cards they want to play - 8, 12 or 16.
 3. Turns counter - lets player know how many turns it has taken so far in this game.
 4. Board that displays cards in 4 columns and number of rows on computers, tablets and most phone devices.
-5. Timer - that allows user only 60 seconds to finish level hard. 
+5. Timer - that allows user only 60 seconds to finish level hard.
 6. Game over modal - stopping and resetting the game after time has run out on level hard.
 7. Win modal that congratulates user winning of the game - matching all cards.
 
-### Features left to implement in the future:
+### Features left to implement in the future
+
 1. Best results /scoreboard.
 2. Adding possibility of logging username  and then using it in the scoreboard
 3. Different set of cards to be chosen ie. comic characters, game characters etc.
 
-# Technologies
-1. Languages : 
-- [HTML](https://www.w3schools.com/html/), 
-- [CSS](https://www.w3schools.com/css/),  
-- [JavaScript](https://www.w3schools.com/js/) 
+## Technologies
 
-2. Libraries:
-- [Bootstrap](https://getbootstrap.com/) - structuring the layout of the website and mobile first design, 
-- [Font Awesome](https://fontawesome.com/) - used in win modal,
-- [jQuery](https://jquery.com/) - used in places to simplify DOM manipulation, 
+### Languages
+
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
+- [JavaScript](https://www.w3schools.com/js/)
+
+### Libraries
+
+- [Bootstrap](https://getbootstrap.com/) - structuring the layout of the website and mobile first design
+- [Font Awesome](https://fontawesome.com/) - used in win modal
+- [jQuery](https://jquery.com/) - used in places to simplify DOM manipulation
 - [Google Fonts](https://fonts.google.com/) - used to style website font
 
-3. Tools:
-- [Git](https://git-scm.com/) - for version control,
-- [GitHub](https://github.com/) - code stored and shared remotely, 
-- [Visual Studio Code](https://code.visualstudio.com/) - IDE,  
-- [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process, 
+### Tools
+
+- [Git](https://git-scm.com/) - for version control
+- [GitHub](https://github.com/) - code stored and shared remotely
+- [Visual Studio Code](https://code.visualstudio.com/) - IDE
+- [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - testing the page through the development process
 - [Autoprefixer](https://autoprefixer.github.io/) - checking and bringing code up to date
 - [Balsamiq](https://balsamiq.com/) - creating wireframes
 
-# Testing
+## Testing
 
 Testing details can be found in separate testing.md [file](https://github.com/malc-u/memoryCardGame/blob/master/testing.md)
 
-# Deployment
+## Deployment
 
 Deploying this page from GitHub repository to GitHub Pages was achieved by following these steps:
+
 1. Logging into **GitHub**
 2. Picking **malc-u/memoryCardGame** repository for the list of repositories
 3. Selecting **Settings** - from menu items on the top of the page (top, right hand corner)
@@ -122,23 +136,27 @@ To clone this project from this repository following steps need to be taken:
 6. **Change** the current **working directory** to the location where you want the cloned directory to be
 7. Type **git clone**, and then paste **the URL** you copied in Step 3 - in this project the comant should be:
 
-```
-	git clone https://github.com/malc-u/memoryCardGame.git
-```
+    ```console
 
-8. Press **Enter** to create your local clone 
+  git clone <https://github.com/malc-u/memoryCardGame.git>
+
+   ```
+
+8. Press **Enter** to create your local clone
 
 Further reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-# Credits
+## Credits
 
 The content of this page was written by me however following people & their work have influenced me and this project:
-- [Bartek Borowczyk](https://www.udemy.com/user/samuraj-programowania/) - mechanics of assigning, swapping classes and card matching and JavaScript in general 
+
+- [Bartek Borowczyk](https://www.udemy.com/user/samuraj-programowania/) - mechanics of assigning, swapping classes and card matching and JavaScript in general
 - [Mike Bostock](https://bost.ocks.org/mike/) - mechanics of shuffling an array and Fisher–Yates Shuffle
 - [Eric Schwartz](https://medium.com/@ericschwartz7) - mechanics of adding sounds to the page
 - [Simen Daehlin](https://github.com/Eventyret) Code Institute mentor - overall aspect of the project
 
 I have also used following for reacherching:
+
 - Reddit - for sourcing [background picture](https://www.reddit.com/r/wallpaper/comments/acqekd/neon_gas_1920x1080/) and [colors](https://www.reddit.com/user/-Space-Cadet-/)
 - [Freesound](https://freesound.org/) - for sourcing click sound
 - [Nintendo](http://mario.nintendo.com/)- sourcing pictures of Mario and Luigi
