@@ -244,7 +244,7 @@ function playHardLevel() {
 /** Function that allows picking desired difficulty of a game
  */
 
-let pickingDifficulty = function () {
+function pickingDifficulty () {
     activeButton = this;
     if ($(this).hasClass('easybtn')) {
         playEasyLevel();
@@ -257,7 +257,7 @@ let pickingDifficulty = function () {
 
 /** Function that makes difficulty button clickable
  */
-let enablingDifficultyClick = function () {
+function enablingDifficultyClick() {
     difficultyButtons.forEach(function (button) {
         button.addEventListener('click', pickingDifficulty);
     });
