@@ -1,4 +1,4 @@
-# Memory game for 80s kids and card matching game for their kids - all in one
+# Memory game for 80s kids, card matching game for their kids
 
 ![Awesome 80s memory game](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/header.png?raw=true)
 
