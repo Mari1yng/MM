@@ -136,11 +136,9 @@ To clone this project from this repository following steps need to be taken:
 6. **Change** the current **working directory** to the location where you want the cloned directory to be
 7. Type **git clone**, and then paste **the URL** you copied in Step 3 - in this project the comant should be:
 
-    ```console
-
-  git clone <https://github.com/malc-u/memoryCardGame.git>
-
-   ```
+```console
+git clone <https://github.com/malc-u/memoryCardGame.git>
+```
 
 8. Press **Enter** to create your local clone
 
