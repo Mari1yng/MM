@@ -134,13 +134,11 @@ To clone this project from this repository following steps need to be taken:
 4. **Open** your local **IDE**
 5. **Open** your favourite **terminal** (e.g. in your local IDE)
 6. **Change** the current **working directory** to the location where you want the cloned directory to be
-7. Type **git clone**, and then paste **the URL** you copied in Step 3 - in this project the comant should be:
+7. Type **git clone**, paste **the URL** you copied in Step 3 then press **Enter** to create your local clone. In this project the command should be:
 
 ```console
 git clone <https://github.com/malc-u/memoryCardGame.git>
 ```
-
-8. Press **Enter** to create your local clone
 
 Further reading or help with cloning can be found on this GitHub Help [page](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
