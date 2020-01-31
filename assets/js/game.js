@@ -291,6 +291,9 @@ function gameOver() {
 }
 
 function winAlert() {
+    $('#winModal').modal({
+        keyboard: false
+    });
     $('#winModal').modal('show');
     $('.winModalBtn').click(resetGame);
 }
