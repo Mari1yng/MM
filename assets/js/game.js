@@ -1,5 +1,4 @@
-/** Variables  
- */
+// Variables  
 const allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
 const difficultyButtons = [...document.getElementsByClassName('difficulty')];
 const timerDisplay = document.getElementById('timer');
@@ -14,9 +13,11 @@ let timeLeft;
 let timer;
 
 
-/** Shuffle all cards using Fisher-Yates shuffle algorithm
- *  This function is called every time after difficulty was changed
- *  and card deck assigned 
+/** 
+ * Shuffle all cards using Fisher-Yates shuffle algorithm
+ * described and explained by Mike Bostock.
+ * This function is called every time after difficulty was changed
+ * and card deck assigned 
  */
 
 function shuffle(cards) {
@@ -31,7 +32,8 @@ function shuffle(cards) {
     return cards;
 }
 
-/** CountDown function is set to add additional difficulty to the game
+/** 
+ * CountDown function is set to add additional difficulty to the game
  * but only while level hard is picked. 
  */
 
@@ -44,7 +46,8 @@ function countDown() {
     }
 }
 
-/** Function that will create new grid within the container with id #board.
+/** 
+ * Function that will create new grid within the container with id #board.
  * variable newGrid is created to make sure all necessary classes to give 
  * possibility to change the picture displayed(card flipped) and id 
  * that will be used to make sure there are no errors in card matching.
@@ -53,20 +56,26 @@ function countDown() {
 function createGrid() {
     let newGrid = '';
     for (let i = 0; i < deck.length; i++) {
-        newGrid += '<div id="GridPositionNo' + (i + 1) + '"class="mx-auto tile ' + deck[i] + ' hidden"></div>';
+        newGrid += `<div id="GridPositionNo${i + 1}" class="mx-auto tile ${
+            deck[i]
+          } hidden"></div>`;
     }
     document.getElementById('board').innerHTML = newGrid;
 }
 
-/** Function playing card click sound */
+/** 
+ * Function playing card click sound written by Eric Schwartz and amended 
+ * by myself to suit the requirements of my game.
+*/
 function playClickSound() {
     $('audio#tilesound')[0].play();
 }
 
-/** Function that will filter all cards by nagation of containing class "removed"
+/** 
+ * Function that will filter all cards by nagation of containing class "removed"
  * this will allow for them to be removed from current "tilesInGrid" array. 
  * This was created to make sure matched cards cannot be clicked again despite
- * being already removed from the card deck.
+ * being already removed from the card deck. 
  */
 
 function disableCards() {
@@ -76,20 +85,23 @@ function disableCards() {
 
 }
 
-/** Function reseting the game  
+/** 
+ * Function reseting the game  
  */
 
 function resetGame() {
     location.reload();
 }
 
-/** Function that will be called when an update to the turnCounter is required
+/** 
+ * Function that will be called when an update to the turnCounter is required
  */
 function turnCounterDisplay() {
     $('h3').html('Turns: ' + turnCounter);
 }
 
-/** Function that adds class 'removed' to matched tiles in order to remove them from the deck-game 
+/** 
+ * Function that adds class 'removed' to matched tiles in order to remove them from the deck-game 
  */
 function removeCardsFromDeck() {
     cardsUncovered.forEach(function (tile) {
@@ -97,8 +109,9 @@ function removeCardsFromDeck() {
     });
 }
 
-/** Function that will add class 'hidden' to the tile after unsucessful match
-  in order to return this card back to the game.
+/** 
+ * Function that will add class 'hidden' to the tile after unsucessful match
+ * in order to return this card back to the game.
  */
 function returnCardsBackToDeck() {
     cardsUncovered.forEach(function (tile) {
@@ -106,7 +119,8 @@ function returnCardsBackToDeck() {
     });
 }
 
-/** Function that checks for a game victory - whether all cards were matched
+/** 
+ * Function that checks for a game victory - whether all cards were matched
  */
 function gameVictoryCheck() {
     if (cardsMatched == deck.length / 2) {
@@ -118,7 +132,8 @@ function gameVictoryCheck() {
     }
 }
 
-/** Function that returns possibility of tile clicking/flipping
+/** 
+ * Function that returns possibility of tile clicking/flipping
  */
 function enableTileClick() {
     tilesInGrid.forEach(function (tile) {
@@ -126,7 +141,8 @@ function enableTileClick() {
     });
 }
 
-/** Removing possibility of tile clicking/flipping
+/** 
+ * Removing possibility of tile clicking/flipping
  */
 function disableTileClick() {
     tilesInGrid.forEach(function (tile) {
@@ -134,7 +150,8 @@ function disableTileClick() {
     });
 }
 
-/** Function that checks for a card match - pair match
+/** 
+ * Function that checks for a card match - pair match
  */
 function checkForCardMatch() {
     if (cardsUncovered[0].className === cardsUncovered[1].className && cardsUncovered[0].id != cardsUncovered[1].id) {
@@ -147,8 +164,9 @@ function checkForCardMatch() {
     }
 }
 
-/** Function delaying cards to be flipped back in order to allow game user to
-   see what card has been uncovered but not matched or what pair has been removed from the game
+/** 
+ * Function delaying cards to be flipped back in order to allow game user to
+ * see what card has been uncovered but not matched or what pair has been removed from the game
 */
 function delayCardsFlippingBack() {
     setTimeout(function () {
@@ -158,7 +176,10 @@ function delayCardsFlippingBack() {
     }, 750);
 }
 
-/** Function that will reveal cards after tile was flipped 
+/** 
+ * Function that will reveal cards after tile was flipped. 
+ * Function was written by Bartek Borowczyk but was amended by myself 
+ * to suit the requirements of my game.
  */
 
 function cardRevealed() {
@@ -181,7 +202,8 @@ function cardRevealed() {
     }
 }
 
-/** Function that starts timer for hard level
+/** 
+ * Function that starts timer for hard level
  */
 
 function startTimerIfNeeded() {
@@ -195,7 +217,8 @@ function startTimerIfNeeded() {
     }
 }
 
-/** Fuction that let's tile flipping and playing game
+/** 
+ * Fuction that let's tile flipping and playing game
  */
 
 function startTileFlipping() {
@@ -204,7 +227,8 @@ function startTileFlipping() {
     enableTileClick();
 }
 
-/** Function setting easy level play
+/**
+ * Function setting easy level play
  */
 
 function playEasyLevel() {
@@ -217,7 +241,8 @@ function playEasyLevel() {
     startTileFlipping();
 }
 
-/** Function setting medium level play
+/** 
+ * Function setting medium level play
  */
 function playMediumLevel() {
     deck = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
@@ -229,7 +254,8 @@ function playMediumLevel() {
     startTileFlipping();
 }
 
-/** Function setting hard level play
+/** 
+ * Function setting hard level play
  */
 function playHardLevel() {
     deck = allCards;
@@ -241,7 +267,8 @@ function playHardLevel() {
     startTileFlipping();
 }
 
-/** Function that allows picking desired difficulty of a game
+/** 
+ * Function that allows picking desired difficulty of a game
  */
 
 function pickingDifficulty () {
@@ -255,7 +282,8 @@ function pickingDifficulty () {
     }
 };
 
-/** Function that makes difficulty button clickable
+/** 
+ * Function that makes difficulty button clickable
  */
 function enablingDifficultyClick() {
     difficultyButtons.forEach(function (button) {
@@ -263,13 +291,15 @@ function enablingDifficultyClick() {
     });
 };
 
-/** Calling for a function that starts game process by allowing the user to pick 
+/** 
+ * Calling for a function that starts game process by allowing the user to pick 
  * difficulty and then proceed with a game
  * */
 
 enablingDifficultyClick();
 
-/** Setting modals - welcome (on page load, on game reset etc.), game over (after time
+/** 
+ * Setting modals - welcome (on page load, on game reset etc.), game over (after time
  * has run out in level hard) and winning one (all cards matched, game won) 
  */
 function welcomeModal() {
