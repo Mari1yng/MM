@@ -1,6 +1,34 @@
-# Memory game for 80s kids, card matching game for their kids
+# Awesome 80s memory game
 
 ![Awesome 80s memory game](https://github.com/malc-u/memoryCardGame/blob/master/assets/images/header.png?raw=true)
+
+Memory game for 80s kids & card matching game for their kids.
+
+Entertaining card matching game that will remind you characters you loved as a child and that will introduce your children to them.
+
+- [Awesome 80s memory game](#awesome-80s-memory-game)
+  - [UX](#ux)
+    - [Project purpose](#project-purpose)
+      - [Site user goals - children](#site-user-goals---children)
+      - [Site user goals - adults(parents and guardians)](#site-user-goals---adultsparents-and-guardians)
+      - [User stories](#user-stories)
+    - [Wireframes](#wireframes)
+    - [Design decisions](#design-decisions)
+      - [Color scheme](#color-scheme)
+      - [Fonts](#fonts)
+      - [Background](#background)
+      - [Card images](#card-images)
+  - [Features](#features)
+    - [Existing features](#existing-features)
+    - [Features left to implement in the future](#features-left-to-implement-in-the-future)
+  - [Technologies](#technologies)
+    - [Languages](#languages)
+    - [Libraries](#libraries)
+    - [Tools](#tools)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [How to run this project locally](#how-to-run-this-project-locally)
+  - [Credits](#credits)
 
 ## UX
 
