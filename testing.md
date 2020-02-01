@@ -39,17 +39,17 @@
 Throughout the develompment process I came across several bugs related to responsiveness.
 
 1. **Difficulty buttons**
-   - **Bug:** buttons were moving from inline to block too early, they were stacking on top of each other while the board was still displayed underneath them and not to the right
-   - **Fix:** amended media rule in CSS
-   - **Result:** this bug was removed and difficuty buttons are not fully responsive and as expected
-2.**Cards**
-   - **Bug:** cards were floating left. This was mostly visible on smaller devices
-   - **Fix:** added Bootstrap's mx-auto class to each tile created via JavaScrip in createGrid function
-   - **Result:** - this bug was removed and cards are now centered on the table
-3.**Number of cards in a row**
-   - **Bug:** there were more than 4 cards displayed in 1 row misshaping the grid
-   - **Fix:** amended card sizes for certain screen sizes in media rules in CSS
-   - **Result:** this bug was removed and cards are now displayed 4 in a row on all devices tested
+      - **Bug:** buttons were moving from inline to block too early, they were stacking on top of each other while the board was still displayed underneath them and not to the right
+      - **Fix:** amended media rule in CSS
+      - **Result:** this bug was removed and difficuty buttons are not fully responsive and as expected
+2. **Cards**
+      - **Bug:** buttons were moving from inline to block too early, they were stacking on top of each other while the board was still displayed underneath them and not to the right
+      - **Fix:** amended media rule in CSS
+      - **Result:** this bug was removed and difficuty buttons are not fully responsive and as expected
+3. **Number of cards in a row**
+      - **Bug:** there were more than 4 cards displayed in 1 row misshaping the grid
+      - **Fix:** amended card sizes for certain screen sizes in media rules in CSS
+      - **Result:** this bug was removed and cards are now displayed 4 in a row on all devices tested
 
 ### Tested interaction in Chrome, Firefox and Opera(on mobile)
 
