@@ -6,7 +6,7 @@
       - [Bugs - responsiveness](#bugs---responsiveness)
     - [Interaction](#interaction)
       - [Bugs - interaction](#bugs---interaction)
-    - [Tested game logic using using Chrome, Firefox and Opera(on mobile)](#tested-game-logic-using-using-chrome-firefox-and-operaon-mobile)
+    - [Logic](#logic)
       - [Game logic bugs/problems](#game-logic-bugsproblems)
   - [User stories testing](#user-stories-testing)
   - [Automated testing](#automated-testing)
@@ -93,19 +93,21 @@ Throughout the develompment process I came across two bugs related to page/game 
    - **Fix:** switching backdrop off in this modal as well as initializing modal without keyboard
    - **Result:** this bug was removed and only clicking x  or "Close" will close the modal
 
-### Tested game logic using using Chrome, Firefox and Opera(on mobile)
+### Logic
 
-This test was done to make sure JavaScript runs correctly (as desired) on these browsers.
-
-1. Attempted to click more than 2 cards in 1 turn.
-2. Attempted to double click in order to achieve a match on 1 card.
-3. Tried to change difficulty levels many times in order for grid to be created incorrectly.
-4. Changed difficulty level from hard to other one and then returning to hard trying to overlap setInterval timer function for the timer to count down quicker than every second.
-5. Picking the same level and uncovering the same card in a grid hoping card deck stays not shuffled.
-6. Playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain not shuffled.
-7. Changing level mid way playing the game hoping for the turn counter to remain unchanged.
-8. Clicked hard level few times to check whether the timer resets.
-
+- **Plan:** this game is planned to have 3 difficulty levels with either 8, 12 or 16 tiles displaying and requiring from the player to match 4, 6 or 8 pairs. Game should count turns after 2 cards are revealed, it designed to display win modal after all pairs are matched. There is also time limit on level hard - this will be displayed to the player as a counting down timer. Should player fail to match all pairs in this time game over modal is going to be displayed. The game is starting with Welcome modal explaining game rules, this will be repeated each time game is reset.
+- **Implementation:**
+  - attempted to click more than 2 cards in 1 turn
+  - attempted to double click in order to achieve a match on 1 card
+  - tried to change difficulty levels many times in order for grid to be created incorrectly
+  - changed difficulty level from hard to other one and then returning to hard trying to overlap setInterval timer function for the timer to count down quicker than every second
+  - picking the same level and uncovering the same card in a grid hoping card deck stays not shuffled
+  - playing game on 1 level then changing the game hoping for tiles on new level that were also displayed on previous level to remain not shuffled
+  - changing level mid way playing the game hoping for the turn counter to remain unchanged
+  - clicked hard level few times to check whether the timer resets
+- **Results:** all tested elements are working properly. There are no elements that present problems with logic
+- **Conclusion:** all tests that were run on logic were passed 
+  
 #### Game logic bugs/problems
 
 - **Double clicking** of the **card** was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID.
