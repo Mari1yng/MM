@@ -75,29 +75,29 @@ This test was done to make sure JavaScript runs correctly (as desired) on these 
 
 ## User stories testing
 
-1. Playing game to kill spare time (eg. during travel etc.):
-    - this game is perfect to play in spare time, it is easy to operate, engaging and not too complicated,
-    - playing this game does not require too much concentration therefore can be played on the move,
-    - easy and quick game for a user to keep themselves occupied during spare time.
+1. As a user I want to play easy but not too involving game to kill spare time (eg. during travel etc.):
+    - this game is perfect to play in spare time, it is easy to operate, engaging and not too complicated
+    - playing this game does not require too much concentration therefore can be played on the move
+    - easy and quick game for a user to keep themselves occupied during spare time
+  
+2. As a user and a parent I want the game that is easy enough for my children to operate:
+    - game that requires matching 2 cards only is not too complicated even for very yung children
+    - game is easy to operate - just couple of clicks gets children engaged and challenged
+    - game allows user to pick easy level that requires matching only 4 pairs
+    - for older children there is also added difficulty of time limit on leve hard - easy but challenging
 
-2. Game that is easy enough for my children to operate
-    - game that requires matching 2 cards only is not too complicated even for very yung children,
-    - game is easy to operate - just couple of clicks gets children engaged and challenged,
-    - game allows user to pick easy level that requires matching only 4 pairs,
-    - for older children there is also added difficulty of time limit on leve hard - easy but challenging.
+3. As a user I want to play the game that is visually appealing:
+    - game is very colorful and nice looking
+    - game presents user with characters that attract attention
+    - fonts and colors used evoke emotion
 
-3. Playing the game that is visually appealing
-    - game is very colorful and nice looking,
-    - game presents user with characters that attract attention,
-    - fonts and colors used evoke emotion.
-
-4. Playing game that can introduce my children to characters I knew as a child:
+4. As a user and a parent I want to be presented with cards that present known to me characters:
     - game presents users with very popular game and comic book characters from 80s: Mario and Luigi - 2 plumbers from [Mario Bros](https://en.wikipedia.org/wiki/Mario_Bros.), [Donkey Kong](https://en.wikipedia.org/wiki/Donkey_Kong) from very popular game of the same name, Arcade's [Frogger](https://en.wikipedia.org/wiki/Frogger), [Bomb Jack](https://en.wikipedia.org/wiki/Bomb_Jack) as well as ghost from [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), complimented with 2 from the list of the most popular comic book characters that debuted in 1980s - [Robin](https://en.wikipedia.org/wiki/Tim_Drake) & Leonardo - one of 4 [Ninja Turtles](https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles).
 
-5. Playing game that can spark conversation between me and my children/me and my parents:
-    - introducing characters that were very popular in 80s and beginning of 90s will allow children to ask questions about them,
-    - characters used in the cards can also allow parents to present children with original games and comics that the characters come from.
-
+5. As a user I want to be presented with the characters that can spark conversation between parents and children:
+    - introducing characters that were very popular in 80s and beginning of 90s will allow children to ask parents some questions about them
+    - characters used in the cards can also allow parents to present children with original games and comics that the characters come from
+  
 ## Automated testing
 
 Following online validators were used to test the code:
