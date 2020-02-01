@@ -4,7 +4,7 @@
   - [Manual testing](#manual-testing)
     - [Responsiveness](#responsiveness)
       - [Bugs](#bugs)
-    - [Tested interaction in Chrome, Firefox and Opera(on mobile)](#tested-interaction-in-chrome-firefox-and-operaon-mobile)
+    - [Interaction](#interaction)
       - [Interaction bugs/problems](#interaction-bugsproblems)
     - [Tested game logic using using Chrome, Firefox and Opera(on mobile)](#tested-game-logic-using-using-chrome-firefox-and-operaon-mobile)
       - [Game logic bugs/problems](#game-logic-bugsproblems)
@@ -18,8 +18,8 @@
 
 ### Responsiveness
 
-- **Plan:** This game was planned to be responsive, working on all devices - mobile phones, tablets and desktops. Following this it was planned for Bootstrap library to be used for a page design.
-- **Implementation:** Page was **tested in Chrome Developer Tools** throughout the process of putting it together to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer. Bootstrap classes as well as media rules were used to adjust responsiveness.
+- **Plan:** this game was planned to be responsive, working on all devices - mobile phones, tablets and desktops. Following this it was planned for Bootstrap library to be used for a page design.
+- **Implementation:** page was **tested in Chrome Developer Tools** throughout the process of putting it together to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer. Bootstrap classes as well as media rules were used to adjust responsiveness.
 **Tested** the pages **on** all sizes/devices **available in Chrome**, these were:
   - 360 x 640 Blackberry Z30 & Galaxy Note
   - 375 x 812 iPhone X
@@ -31,8 +31,8 @@
   - 768 x 1024 iPad
   - 1024 x 1366 iPad Pro
 
-- **Results:** Page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
-- **Findings:** All tests that were run on responsivenes were passed therefore page is fully responsive.
+- **Results:** page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
+- **Findings:** all tests that were run on responsivenes were passed therefore page is fully responsive.
 
 #### Bugs
 
@@ -51,29 +51,26 @@ Throughout the develompment process I came across several bugs related to respon
       - **Fix:** amended card sizes for certain screen sizes in media rules in CSS
       - **Result:** this bug was removed and cards are now displayed 4 in a row on all devices tested
 
-### Tested interaction in Chrome, Firefox and Opera(on mobile)
+### Interaction
 
-Page buttons were tested for correct operation and whether they operated and opened intended parts of page(difficulty levels etc.).
-
-1. Easy button:
+- **Plan:** there are elements that are planned to be interactive on this page, these are buttons, cards and modals
+- **Implementation:**was carried out on many devices and on several browsers, including Chrome, Firefox and Opera. Following elements were tested:
+  - Easy level button:
     - seleceted easy level and confirmed assigning 8 tiles to the grid
     - played the game finding 3 out of 4 matches and re-clicked easy button to make sure new grid is created and game is reset
     - confrimed that each time easy button is clicked all cards are being re-shufled
     - completed the game in easy mode and confirmed that win modal is displayed
-    - clicked another diffuculty and confirmed that easy grid is being replaced with another difficulty grid.
+    - clicked another diffuculty and confirmed that easy grid is being replaced with another difficulty grid
+  - Medium level button
+  - Hard level button
+  - Win modal
+  - Game over modal
+  - Welcome modal
 
-2. Medium button:
-    - repeated all steps from easy button level and confirmed that correct grid is assigned/displayed, cards are re-shuffled and game reset when clicked.
+- **Results:**
+- **Findings:**
 
-3. Hard button:
-    - repeated all steps from easy and medium buttons to confirm correct grid is assigned/displayed, cards are re-shuffled and game reset.
-    - selected hard level and confirmed the timer is reset to count down.
-
-4. Clicking close in win modal reloads the.
-
-5. Clicking close in game over modal reloads the game.
-
-6. Clicking close in welcome modal closes it allowing for the difficulty level to be picked.
+1
 
 #### Interaction bugs/problems
 
