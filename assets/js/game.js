@@ -178,7 +178,7 @@ function delayCardsFlippingBack() {
 
 /** 
  * Function that will reveal cards after tile was flipped. 
- * Function was written by Bartek Borowczyk but was amended by myself 
+ * Function was written by Bartek Borowczyk but was changed by myself 
  * to suit the requirements of my game.
  */
 
