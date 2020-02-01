@@ -66,7 +66,7 @@ function createGrid() {
 /** 
  * Function playing card click sound written by Eric Schwartz and amended 
  * by myself to suit the requirements of my game.
-*/
+ */
 function playClickSound() {
     $('audio#tilesound')[0].play();
 }
@@ -167,7 +167,7 @@ function checkForCardMatch() {
 /** 
  * Function delaying cards to be flipped back in order to allow game user to
  * see what card has been uncovered but not matched or what pair has been removed from the game
-*/
+ */
 function delayCardsFlippingBack() {
     setTimeout(function () {
         checkForCardMatch();
@@ -271,7 +271,7 @@ function playHardLevel() {
  * Function that allows picking desired difficulty of a game
  */
 
-function pickingDifficulty () {
+function pickingDifficulty() {
     activeButton = this;
     if ($(this).hasClass('easybtn')) {
         playEasyLevel();
