@@ -32,7 +32,7 @@
   - 1024 x 1366 iPad Pro
 
 - **Results:** page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
-- **Findings:** all tests that were run on responsivenes were passed therefore page is fully responsive.
+- **Conclusion:** all tests that were run on responsivenes were passed therefore page is fully responsive.
 
 #### Bugs
 
@@ -76,11 +76,8 @@ Throughout the develompment process I came across several bugs related to respon
     - confirmed that there is no possbility of closing this modal using keyboard
   - Welcome modal:
     - confirmed that clicking close in this modal modal closes it allowing for the difficulty level to be picked
-
-- **Results:**
-- **Findings:**
-
-1
+- **Results:** all tested elements are interactive as planned . There are no elements on this page that are not responding as planned.
+- **Conclusion:** all tests that were run on interactivity were passed therefore page is interactive.
 
 #### Interaction bugs/problems
 
