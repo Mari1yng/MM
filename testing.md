@@ -54,18 +54,28 @@ Throughout the develompment process I came across several bugs related to respon
 ### Interaction
 
 - **Plan:** there are elements that are planned to be interactive on this page, these are buttons, cards and modals
-- **Implementation:**was carried out on many devices and on several browsers, including Chrome, Firefox and Opera. Following elements were tested:
+- **Implementation:** was carried out on many devices and on several browsers, including Chrome, Firefox and Opera. Following elements were tested:
   - Easy level button:
     - seleceted easy level and confirmed assigning 8 tiles to the grid
     - played the game finding 3 out of 4 matches and re-clicked easy button to make sure new grid is created and game is reset
     - confrimed that each time easy button is clicked all cards are being re-shufled
     - completed the game in easy mode and confirmed that win modal is displayed
     - clicked another diffuculty and confirmed that easy grid is being replaced with another difficulty grid
-  - Medium level button
-  - Hard level button
-  - Win modal
-  - Game over modal
-  - Welcome modal
+  - Medium level button:
+    - repeated all steps from easy button level and confirmed that correct grid is assigned/displayed, cards are re-shuffled and game reset when clicked
+  - Hard level button:
+    - repeated all steps from easy button level and confirmed that correct grid is assigned/displayed, cards are re-shuffled and game reset when clicked
+    - selected hard level and confirmed the timer is reset to count down
+  - Win modal:
+    - confirmed that clicking close in this modal reloads the game
+    - confirmed that there is no possibility to click on the backdrop of this modal
+    - confirmed that there is no possbility of closing this modal using keyboard
+  - Game over modal:
+    - confirmed that clicking close in this modal reloads the game
+    - confirmed that there is no possibility to click on the backdrop of this modal
+    - confirmed that there is no possbility of closing this modal using keyboard
+  - Welcome modal:
+    - confirmed that clicking close in this modal modal closes it allowing for the difficulty level to be picked
 
 - **Results:**
 - **Findings:**
