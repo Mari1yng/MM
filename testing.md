@@ -82,10 +82,16 @@ Throughout the develompment process I came across several bugs related to respon
   
 #### Bugs - interaction
 
-Throughout the develompment process I came across several bugs related to responsiveness.
+Throughout the develompment process I came across two bugs related to page/game interaction.
 
-1. Game over modal
-2. Win modal
+1. **Game over modal**
+   - **Bug:** clicking keyboard or modal backdrop was allowing for a game to be carried on even though time has run out and modal was still displayed
+   - **Fix:** switching backdrop off in this modal as well as initializing modal without keyboard
+   - **Result:** this bug was removed and only clicking x will close the modal
+2. **Win modal**
+   - **Bug:** clicking keyboard or modal backdrop was allowing for another game to be started without reset
+   - **Fix:** switching backdrop off in this modal as well as initializing modal without keyboard
+   - **Result:** this bug was removed and only clicking x  or "Close" will close the modal
 
 ### Tested game logic using using Chrome, Firefox and Opera(on mobile)
 
