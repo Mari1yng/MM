@@ -1,22 +1,38 @@
 # Testing
 
+- [Testing](#testing)
+  - [Manual testing](#manual-testing)
+    - [Responsiveness](#responsiveness)
+      - [Responsiveness bugs/problems](#responsiveness-bugsproblems)
+    - [Tested interaction in Chrome, Firefox and Opera(on mobile)](#tested-interaction-in-chrome-firefox-and-operaon-mobile)
+      - [Interaction bugs/problems](#interaction-bugsproblems)
+    - [Tested game logic using using Chrome, Firefox and Opera(on mobile)](#tested-game-logic-using-using-chrome-firefox-and-operaon-mobile)
+      - [Game logic bugs/problems](#game-logic-bugsproblems)
+  - [User stories testing](#user-stories-testing)
+  - [Automated testing](#automated-testing)
+    - [HTML validation](#html-validation)
+    - [CSS validation](#css-validation)
+    - [JavaScript validation](#javascript-validation)
+
 ## Manual testing
 
-### Responsiveness was tested in Chrome Developer Tools
+### Responsiveness
 
-Page was tested to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer.
-
+- **Plan:** This game was planned to be responsive, working on all devices - mobile, tablets and desktops. Following this it was planned for Bootstrap library to be used as a basis of the design.
+- **Implementation:** Page was **tested in Chrome Developer Tools** throughout the process of putting it together to sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer. Bootstrap classes as well as media rules were used to adjust responsiveness.
 **Tested** the pages **on** all sizes/devices **available in Chrome**.
+  - 360 x 640 Blackberry Z30 & Galaxy Note
+  - 375 x 812 iPhone X
+  - 375 x 687 iPhone 6/7/8
+  - 411 x 731 Pixel 2
+  - 411 x 823 Pixel 2 XL
+  - 414 x 736 iPhone 6/7/8 Plus
+  - 600 x 1024 Blackberry PlayBook
+  - 768 x 1024 iPad
+  - 1024 x 1366 iPad Pro
 
-- 360 x 640 Blackberry Z30 & Galaxy Note
-- 375 x 812 iPhone X
-- 375 x 687 iPhone 6/7/8
-- 411 x 731 Pixel 2
-- 411 x 823 Pixel 2 XL
-- 414 x 736 iPhone 6/7/8 Plus
-- 600 x 1024 Blackberry PlayBook
-- 768 x 1024 iPad
-- 1024 x 1366 iPad Pro
+- **Results:** Page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
+- **Findings:** All tests run were passed therefore page is fully responsive.
 
 #### Responsiveness bugs/problems
 
