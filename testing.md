@@ -3,9 +3,9 @@
 - [Testing](#testing)
   - [Manual testing](#manual-testing)
     - [Responsiveness](#responsiveness)
-      - [Bugs](#bugs)
+      - [Bugs - responsiveness](#bugs---responsiveness)
     - [Interaction](#interaction)
-      - [Interaction bugs/problems](#interaction-bugsproblems)
+      - [Bugs - interaction](#bugs---interaction)
     - [Tested game logic using using Chrome, Firefox and Opera(on mobile)](#tested-game-logic-using-using-chrome-firefox-and-operaon-mobile)
       - [Game logic bugs/problems](#game-logic-bugsproblems)
   - [User stories testing](#user-stories-testing)
@@ -34,7 +34,7 @@
 - **Results:** page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
 - **Conclusion:** all tests that were run on responsivenes were passed therefore page is fully responsive.
 
-#### Bugs
+#### Bugs - responsiveness
 
 Throughout the develompment process I came across several bugs related to responsiveness.
 
@@ -76,12 +76,16 @@ Throughout the develompment process I came across several bugs related to respon
     - confirmed that there is no possbility of closing this modal using keyboard
   - Welcome modal:
     - confirmed that clicking close in this modal modal closes it allowing for the difficulty level to be picked
-- **Results:** all tested elements are interactive as planned . There are no elements on this page that are not responding as planned.
-- **Conclusion:** all tests that were run on interactivity were passed therefore page is interactive.
+  
+- **Results:** all tested elements are interactive as planned . There are no elements on this page that are not responding as planned
+- **Conclusion:** all tests that were run on interactivity were passed therefore page is interactive
+  
+#### Bugs - interaction
 
-#### Interaction bugs/problems
+Throughout the develompment process I came across several bugs related to responsiveness.
 
-- **Game over modal** - clicking keyboard or modal backdrop was allowing for a game to be carried on even though time has run out and modal was still displayed. This was fixed by switching backdrop off in this modal as well as initializing modal without keyboard.
+1. Game over modal
+2. Win modal
 
 ### Tested game logic using using Chrome, Firefox and Opera(on mobile)
 
