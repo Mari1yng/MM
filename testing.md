@@ -7,7 +7,7 @@
     - [Interaction](#interaction)
       - [Bugs - interaction](#bugs---interaction)
     - [Logic](#logic)
-      - [Game logic bugs/problems](#game-logic-bugsproblems)
+      - [Bugs - logic](#bugs---logic)
   - [User stories testing](#user-stories-testing)
   - [Automated testing](#automated-testing)
     - [HTML validation](#html-validation)
@@ -106,14 +106,26 @@ Throughout the develompment process I came across two bugs related to page/game 
   - changing level mid way playing the game hoping for the turn counter to remain unchanged
   - clicked hard level few times to check whether the timer resets
 - **Results:** all tested elements are working properly. There are no elements that present problems with logic
-- **Conclusion:** all tests that were run on logic were passed 
+- **Conclusion:** all tests that were run on logic were passed
   
-#### Game logic bugs/problems
+#### Bugs - logic
 
-- **Double clicking** of the **card** was assigned as a card match - fixed by adding another level of comparing card matching - making sure that both card don't have the same ID.
-- **Difficulty level changed mid game** was not resetting turn counter - fixed by adding timeLeft = 0 every time after new grid is created.
-- **Double** or more **click**s on level **hard** cause the timer to count down fast (quicker than every second) - fixed by adding clearInterval before setInterval in function that checks which difficulty level is picked to make sure double clicking will not trigger few intervals to be set
-- **Changing difficulty** level **after** the **fast count down started** resets the grid but leaves the timer to count down to zero and bring up game over modal - fixed by adding clearInterval before setInterval in function that checks which difficulty level is picked to make sure double clicking will not trigger few intervals to be set
+1. **Cards:**
+   - **Bug:** double clicking on the card was assigned as a card match
+   - **Fix:** added another level of comparing card matching, making sure that both cards don't have the same Id
+   - **Result:** this bug was removed and double clicking in not resulting in card match but it is forcing the player to carry on the game
+2. **Difficulty level**
+   - **Bug:** difficulty level changed in the middle of the game was not resetting the timer
+   - **Fix:** fixed by adding timeLeft = 0 every time after new grid is created
+   - **Result:** this bug was removed and every time level is changed before game is finished timer is reset
+3. **Hard level**
+   - **Bug:** double clicking hard level button caused the timer to count down fast, faster than every second,
+   - **Fix:** added clearInterval(timer) before the interval is set within the function that checks which difficulty is being picked
+   - **Result:** this bug was removed and the timer works correctly now
+4. **Timer**
+   - **Bug:** changing difficulty level after the fast count down started reset the grid to another one but the timer was still running down to 0 and bringing up game over modal
+   - **Fix:** added clearInterval(timer) before the interval is set within the function that checks which difficulty is being picked
+   - **Result:** this bug was removed and the timer works correctly now
 
 ## User stories testing
 
