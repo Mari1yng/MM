@@ -3,7 +3,7 @@
 - [Testing](#testing)
   - [Manual testing](#manual-testing)
     - [Responsiveness](#responsiveness)
-      - [Responsiveness bugs/problems](#responsiveness-bugsproblems)
+      - [Bugs](#bugs)
     - [Tested interaction in Chrome, Firefox and Opera(on mobile)](#tested-interaction-in-chrome-firefox-and-operaon-mobile)
       - [Interaction bugs/problems](#interaction-bugsproblems)
     - [Tested game logic using using Chrome, Firefox and Opera(on mobile)](#tested-game-logic-using-using-chrome-firefox-and-operaon-mobile)
@@ -18,9 +18,9 @@
 
 ### Responsiveness
 
-- **Plan:** This game was planned to be responsive, working on all devices - mobile, tablets and desktops. Following this it was planned for Bootstrap library to be used as a basis of the design.
-- **Implementation:** Page was **tested in Chrome Developer Tools** throughout the process of putting it together to sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer. Bootstrap classes as well as media rules were used to adjust responsiveness.
-**Tested** the pages **on** all sizes/devices **available in Chrome**.
+- **Plan:** This game was planned to be responsive, working on all devices - mobile phones, tablets and desktops. Following this it was planned for Bootstrap library to be used for a page design.
+- **Implementation:** Page was **tested in Chrome Developer Tools** throughout the process of putting it together to make sure it was responsive to all devices. "Responsive" slider was used to make sure content is shown correctly on desktop, tablet and mobile, that they look as desired by the developer. Bootstrap classes as well as media rules were used to adjust responsiveness.
+**Tested** the pages **on** all sizes/devices **available in Chrome**, these were:
   - 360 x 640 Blackberry Z30 & Galaxy Note
   - 375 x 812 iPhone X
   - 375 x 687 iPhone 6/7/8
@@ -32,14 +32,24 @@
   - 1024 x 1366 iPad Pro
 
 - **Results:** Page is responsive and can be used on all planned devices. There are no elements on this page that are not responding as planned.
-- **Findings:** All tests run were passed therefore page is fully responsive.
+- **Findings:** All tests that were run on responsivenes were passed therefore page is fully responsive.
 
-#### Responsiveness bugs/problems
+#### Bugs
 
-- **Difficulty buttons were moving from inline to block too early**, when the board was still underneath them not to the right. This was very bad UX - changed media in css.
-- **Cards were floating left**, especially visible on smaller devices - added Bootstrap's mx auto class to each tile created via JavaScript.
-- **More than 4 tiles in 1 row** on some devices - amended media in css to allow for tile size adjustment in order to keep only 4 tiles in 1 row for all devices .
-- Part of **header and turn counter were blending** on mobile devices - changed media to amend colour of header for mobile devices in css.
+Throughout the develompment process I came across several bugs related to responsiveness.
+
+1. **Difficulty buttons**
+   - **Bug:** buttons were moving from inline to block too early, they were stacking on top of each other while the board was still displayed underneath them and not to the right
+   - **Fix:** amended media rule in CSS
+   - **Result:** this bug was removed and difficuty buttons are not fully responsive and as expected
+2.**Cards**
+   - **Bug:** cards were floating left. This was mostly visible on smaller devices
+   - **Fix:** added Bootstrap's mx-auto class to each tile created via JavaScrip in createGrid function
+   - **Result:** - this bug was removed and cards are now centered on the table
+3.**Number of cards in a row**
+   - **Bug:** there were more than 4 cards displayed in 1 row misshaping the grid
+   - **Fix:** amended card sizes for certain screen sizes in media rules in CSS
+   - **Result:** this bug was removed and cards are now displayed 4 in a row on all devices tested
 
 ### Tested interaction in Chrome, Firefox and Opera(on mobile)
 
