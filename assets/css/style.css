@@ -27,7 +27,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -110,6 +109,7 @@ div#board>div {
     cursor: pointer;
 }
 
+/* Classes that are added to reveal, switch off or hide the card*/
 .bombjack {
     background-image: url(../images/bombjack.png);
     background-size: cover;
