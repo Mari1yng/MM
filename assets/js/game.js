@@ -1,5 +1,5 @@
 // Variables  
-const allCards = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong', 'ghost', 'ghost', 'bombjack', 'bombjack'];
+const allCards = ['coffee', 'coffee', 'owl', 'owl', 'school', 'school', 'students', 'students', 'city', 'city', 'bus', 'bus', 'football', 'football', 'book', 'book'];
 const difficultyButtons = [...document.getElementsByClassName('difficulty')];
 const timerDisplay = document.getElementById('timer');
 let turnCounter = 0;
@@ -232,7 +232,7 @@ function startTileFlipping() {
  */
 
 function playEasyLevel() {
-    deck = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin'];
+    deck = ['coffee', 'coffee', 'owl', 'owl', 'school', 'school', 'students', 'students', 'city', 'city', 'bus', 'bus', 'football', 'football', 'book', 'book'];
     shuffle(deck);
     createGrid();
     tilesInGrid = [...document.getElementsByClassName('tile')];
@@ -245,7 +245,7 @@ function playEasyLevel() {
  * Function setting medium level play
  */
 function playMediumLevel() {
-    deck = ['mario', 'mario', 'luigi', 'luigi', 'leonardo', 'leonardo', 'robin', 'robin', 'frogger', 'frogger', 'donkeykong', 'donkeykong'];
+    deck = ['coffee', 'coffee', 'owl', 'owl', 'school', 'school', 'students', 'students', 'city', 'city', 'bus', 'bus', 'football', 'football', 'book', 'book'];
     shuffle(deck);
     createGrid();
     tilesInGrid = [...document.getElementsByClassName('tile')];

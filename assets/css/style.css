@@ -20,7 +20,7 @@
 body {
     font-family: 'Audiowide', sans-serif, cursive;
     color: #f9c80e;
-    background-image: url(../images/background.png);
+    background-image: url(../images/vecteezy_floral-and-organic-shapes-background-in-orange-color-for-design_12289066.png);
     min-height: 100vh;
     background-size: cover;
     -webkit-background-size: cover;
@@ -110,48 +110,48 @@ div#board>div {
 }
 
 /* Classes that are added to reveal, switch off or hide the card*/
-.bombjack {
-    background-image: url(../images/bombjack.png);
+.coffee {
+    background-image: url(../images/cup-of-coffee-with-ice-cartoon-isolate-transparent-background-ai-generated-digital-illustration-png.png);
     background-size: cover;
 }
 
-.donkeykong {
-    background-image: url(../images/donkeykong.png);
+.owl {
+    background-image: url(../images/halloween-spooky-owl-sitting-on-a-branch-of-the-tree-with-dark-black-and-yellow-color-shade-scary-design-for-halloween-event-vector-illustration-halloween-scary-owl-design-on-a-white-background-free-png.png);
     background-size: cover;
 }
 
-.frogger {
-    background-image: url(../images/frogger.png);
+.school {
+    background-image: url(../images/vecteezy_school_1200587.png);
     background-size: cover;
 }
 
-.ghost {
-    background-image: url(../images/ghost.png);
+.students {
+    background-image: url(../images/vecteezy_cartoon-graduate-students-icon_24781754.png);
     background-size: cover;
 }
 
-.leonardo {
-    background-image: url(../images/leonardo.png);
+.city {
+    background-image: url(../images/vecteezy_multi-storey-houses-in-the-city_11841933.png);
     background-size: cover;
 }
 
-.luigi {
-    background-image: url(../images/luigi.png);
+.bus {
+    background-image: url(../images/vecteezy_school-bus-icon-sign-symbol-design_10148513.png);
     background-size: cover;
 }
 
-.mario {
-    background-image: url(../images/mario.png);
+.football {
+    background-image: url(../images/football.png);
     background-size: cover;
 }
 
-.robin {
-    background-image: url(../images/robin.png);
+.book {
+    background-image: url(../images/book-hand-drawn-sketch-png);
     background-size: cover;
 }
 
-.hidden {
-    background-image: url(../images/tilecover.png);
+.KSU {
+    background-image: url(../images/Kennesaw_State_Owls_logo.svg.png);
     background-size: cover;
 }
 
